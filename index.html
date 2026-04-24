@@ -1084,10 +1084,10 @@
     @media (max-width: 860px) { .pricing-grid { grid-template-columns: 1fr; gap: 32px; } }
 
     /* ============================================================
-       PRICING — light sage + grain treatment
+       PRICING — dark green bg + bright inner cards + grain
        ============================================================ */
     .pricing {
-      background: #C8D5CE;
+      background: #0d2b1d;
       position: relative;
       overflow: hidden;
     }
@@ -1096,24 +1096,18 @@
       position: absolute;
       inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23g)'/%3E%3C/svg%3E");
-      opacity: 0.18;
+      opacity: 0.06;
       pointer-events: none;
+      mix-blend-mode: overlay;
       z-index: 0;
     }
     .pricing .container { position: relative; z-index: 1; }
 
-    /* Section header text on light bg */
-    .pricing .section-eyebrow { color: #0d2b1d; }
-    .pricing .section-eyebrow::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none' stroke='%230d2b1d' stroke-width='1.2' stroke-linecap='round'%3E%3Ccircle cx='7' cy='7' r='5.5'/%3E%3Cpath d='M7 1.5C5.3 3 4.2 5 4.2 7s1.1 4 2.8 5.5'/%3E%3Cpath d='M7 1.5C8.7 3 9.8 5 9.8 7s-1.1 4-2.8 5.5'/%3E%3Cline x1='1.5' y1='7' x2='12.5' y2='7'/%3E%3C/svg%3E"); }
-    .pricing .section-title { color: #0d2b1d; }
-    .pricing .section-desc { color: #3d5e50; }
-
-    /* Outer card */
+    /* Bright outer card on dark bg */
     .pricing .pricing-card {
-      background: rgba(255,255,255,0.52);
-      border-color: rgba(0,0,0,0.08);
-      box-shadow: 0 8px 60px rgba(0,0,0,0.06), 0 1px 0 rgba(255,255,255,0.8) inset;
-      backdrop-filter: blur(8px);
+      background: #E6EDEA;
+      border-color: rgba(255,255,255,0.12);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.45);
     }
     .pricing .pricing-label { color: #4d6e5e; }
     .pricing .pricing-value-stack { border-color: rgba(0,0,0,0.1); }
@@ -1121,31 +1115,31 @@
     .pricing .pricing-value-row strong { color: #0d2b1d; }
     .pricing .pricing-value-row span { color: #4d6e5e; }
     .pricing .pricing-value-row b { color: #1a3d2d; }
-    .pricing .pricing-value-total { background: rgba(255,255,255,0.45); border-color: rgba(0,0,0,0.08); }
+    .pricing .pricing-value-total { background: rgba(255,255,255,0.5); border-color: rgba(0,0,0,0.08); }
     .pricing .pricing-value-total span { color: #4d6e5e; }
     .pricing .pricing-value-total strong { color: #0d2b1d; }
     .pricing .pricing-value-total p { color: #4d6e5e; }
     .pricing .pricing-summary { color: #4d6e5e; }
 
-    /* Investment panel — keep dark for contrast */
+    /* Investment panel — dark card within bright card */
     .pricing .pricing-actual {
       background: #0d2b1d;
       border-color: rgba(171,255,192,0.2);
     }
     .pricing .pricing-timer { background: rgba(0,0,0,0.35); }
 
-    /* Fit card */
+    /* Fit card — bright to match */
     .pricing .fit-card {
-      background: rgba(255,255,255,0.35);
-      border-color: rgba(0,0,0,0.1);
+      background: rgba(230,237,234,0.6);
+      border-color: rgba(255,255,255,0.15);
     }
     .pricing .fit-card h3 { color: #0d2b1d; }
     .pricing .fit-card p { color: #3d5e50; }
 
-    /* Suppress the dark ignite hover on the card within light section */
+    /* Hover on bright card */
     .pricing .pricing-card:hover {
-      border-color: rgba(0,0,0,0.15);
-      box-shadow: 0 12px 70px rgba(0,0,0,0.1), 0 1px 0 rgba(255,255,255,0.8) inset;
+      border-color: rgba(255,255,255,0.2);
+      box-shadow: 0 28px 90px rgba(0,0,0,0.5);
     }
 
     /* ============================================================
