@@ -301,7 +301,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: url("assets/asset 01 - hero bg.png") center/cover no-repeat;
+      background: url("assets/asset 19 - connection.png") center/cover no-repeat;
       opacity: 0.07;
       pointer-events: none;
       z-index: 0;
@@ -499,6 +499,7 @@
       animation: reelScroll 60s linear infinite;
       width: max-content;
       will-change: transform;
+      padding-right: 24px; /* makes -50% translate equal exactly one set width */
     }
     .reel-card {
       flex: 0 0 320px;
@@ -658,6 +659,104 @@
     .process-wall-week p { font-size: 14px; color: var(--muted); margin: 8px 0 0; line-height: 1.55; }
     @media (max-width: 960px) {
       .process-overview { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* ============================================================
+       WEEK JOURNEY — visual 3-phase roadmap
+       ============================================================ */
+    .week-journey { display: flex; flex-direction: column; gap: 48px; }
+    .week-journey__intro { max-width: 580px; }
+    .week-journey__intro h3 { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.2; margin-bottom: 12px; }
+    .week-journey__intro p { color: var(--muted); font-size: 17px; line-height: 1.6; margin: 0; }
+    .week-journey__map {
+      display: grid;
+      grid-template-columns: 1fr 36px 1fr 36px 1fr;
+      align-items: stretch;
+    }
+    .wj-phase {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(24px, 3vw, 36px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: border-color .35s ease, box-shadow .35s ease;
+    }
+    .wj-phase:hover {
+      border-color: rgba(171,255,192,0.4);
+      box-shadow: inset 0 1px 0 rgba(171,255,192,0.3), 0 8px 32px -12px rgba(171,255,192,0.15);
+    }
+    .wj-phase__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .wj-phase__roman {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 44px;
+      line-height: 1;
+      color: var(--accent);
+      flex-shrink: 0;
+      opacity: 0.85;
+    }
+    .wj-phase__name {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 21px;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .wj-phase__range {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+    }
+    .wj-steps { display: flex; flex-direction: column; }
+    .wj-step {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      align-items: baseline;
+      gap: 14px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .wj-step:last-child { border-bottom: none; padding-bottom: 0; }
+    .wj-step:first-child { padding-top: 0; }
+    .wj-step__num {
+      font-family: var(--serif);
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      opacity: 0.65;
+    }
+    .wj-step strong {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(17px, 1.7vw, 21px);
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .wj-step--prep .wj-step__num,
+    .wj-step--prep strong { opacity: 0.38; color: var(--muted); }
+    .wj-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      opacity: 0.3;
+    }
+    .wj-arrow svg { width: 28px; height: 14px; }
+    @media (max-width: 860px) {
+      .week-journey__map { grid-template-columns: 1fr; gap: 12px; }
+      .wj-arrow { display: none; }
     }
 
     .process-focus {
@@ -863,7 +962,7 @@
       display: grid;
       grid-template-columns: 1.2fr 1fr;
       gap: 48px;
-      align-items: start;
+      align-items: center;
     }
     .pricing-label {
       display: block;
@@ -983,6 +1082,71 @@
     .fit-card p { color: var(--muted); margin: 0; font-size: 16px; line-height: 1.6; }
 
     @media (max-width: 860px) { .pricing-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+    /* ============================================================
+       PRICING — light sage + grain treatment
+       ============================================================ */
+    .pricing {
+      background: #C8D5CE;
+      position: relative;
+      overflow: hidden;
+    }
+    .pricing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23g)'/%3E%3C/svg%3E");
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .pricing .container { position: relative; z-index: 1; }
+
+    /* Section header text on light bg */
+    .pricing .section-eyebrow { color: #0d2b1d; }
+    .pricing .section-eyebrow::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none' stroke='%230d2b1d' stroke-width='1.2' stroke-linecap='round'%3E%3Ccircle cx='7' cy='7' r='5.5'/%3E%3Cpath d='M7 1.5C5.3 3 4.2 5 4.2 7s1.1 4 2.8 5.5'/%3E%3Cpath d='M7 1.5C8.7 3 9.8 5 9.8 7s-1.1 4-2.8 5.5'/%3E%3Cline x1='1.5' y1='7' x2='12.5' y2='7'/%3E%3C/svg%3E"); }
+    .pricing .section-title { color: #0d2b1d; }
+    .pricing .section-desc { color: #3d5e50; }
+
+    /* Outer card */
+    .pricing .pricing-card {
+      background: rgba(255,255,255,0.52);
+      border-color: rgba(0,0,0,0.08);
+      box-shadow: 0 8px 60px rgba(0,0,0,0.06), 0 1px 0 rgba(255,255,255,0.8) inset;
+      backdrop-filter: blur(8px);
+    }
+    .pricing .pricing-label { color: #4d6e5e; }
+    .pricing .pricing-value-stack { border-color: rgba(0,0,0,0.1); }
+    .pricing .pricing-value-row { border-color: rgba(0,0,0,0.07); }
+    .pricing .pricing-value-row strong { color: #0d2b1d; }
+    .pricing .pricing-value-row span { color: #4d6e5e; }
+    .pricing .pricing-value-row b { color: #1a3d2d; }
+    .pricing .pricing-value-total { background: rgba(255,255,255,0.45); border-color: rgba(0,0,0,0.08); }
+    .pricing .pricing-value-total span { color: #4d6e5e; }
+    .pricing .pricing-value-total strong { color: #0d2b1d; }
+    .pricing .pricing-value-total p { color: #4d6e5e; }
+    .pricing .pricing-summary { color: #4d6e5e; }
+
+    /* Investment panel — keep dark for contrast */
+    .pricing .pricing-actual {
+      background: #0d2b1d;
+      border-color: rgba(171,255,192,0.2);
+    }
+    .pricing .pricing-timer { background: rgba(0,0,0,0.35); }
+
+    /* Fit card */
+    .pricing .fit-card {
+      background: rgba(255,255,255,0.35);
+      border-color: rgba(0,0,0,0.1);
+    }
+    .pricing .fit-card h3 { color: #0d2b1d; }
+    .pricing .fit-card p { color: #3d5e50; }
+
+    /* Suppress the dark ignite hover on the card within light section */
+    .pricing .pricing-card:hover {
+      border-color: rgba(0,0,0,0.15);
+      box-shadow: 0 12px 70px rgba(0,0,0,0.1), 0 1px 0 rgba(255,255,255,0.8) inset;
+    }
 
     /* ============================================================
        TESTIMONIAL STRIP
@@ -1286,8 +1450,8 @@
     .booking-brand { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 10px; }
     .booking-title { font-size: clamp(24px, 3vw, 32px); margin-bottom: 10px; }
     .booking-desc { color: var(--muted); font-size: 15px; line-height: 1.6; margin-bottom: 24px; }
-    .booking-embed { width: 100%; height: 420px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--bg); position: relative; }
-    .booking-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .booking-embed { width: 100%; height: 480px; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.12); background: #fff; position: relative; color-scheme: light; }
+    .booking-embed iframe { width: 100%; height: 100%; border: 0; display: block; background: #fff; color-scheme: light; }
     .booking-fallback { padding: 20px; color: var(--muted); text-align: center; font-size: 14px; }
     .booking-fallback a { color: var(--text); text-decoration: underline; }
 
@@ -1595,23 +1759,93 @@
       </div>
 
       <div class="process-board reveal" aria-label="Builderz World process overview">
-        <div class="process-overview">
-          <div class="process-overview__heading">
+        <div class="week-journey">
+          <div class="week-journey__intro">
             <span class="process-board__kicker">The 8-week plan</span>
             <h3>A simple map of what happens each week.</h3>
-            <p>Week 0 gets the room ready. Weeks 1-8 move from identity, to signal, to leverage, to opportunity, to earned entry into Builderz World.</p>
+            <p>Week 0 sets the room. Weeks 1–8 move from identity to signal to leverage — each phase building on the last.</p>
           </div>
 
-          <div class="process-wall-plan" aria-label="Cohort week plan">
-            <div class="process-wall-week process-wall-week--prep"><span>Week 0</span><strong>Threshold</strong><p>Enter the room, meet the cohort, connect on LinkedIn, and set the Builder's Code.</p></div>
-            <div class="process-wall-week"><span>Week 1</span><strong>Excavation</strong><p>Find the raw stories and patterns behind your Zone of Genius.</p></div>
-            <div class="process-wall-week"><span>Week 2</span><strong>Crystallization</strong><p>Turn discovery into a Brand Brief and a clearer identity pitch.</p></div>
-            <div class="process-wall-week"><span>Week 3</span><strong>Attention</strong><p>Learn notes, hooks, and writing that earns the right attention.</p></div>
-            <div class="process-wall-week"><span>Week 4</span><strong>Traction</strong><p>Use commenting, DMs, and contribution to create social momentum.</p></div>
-            <div class="process-wall-week"><span>Week 5</span><strong>Calibration</strong><p>Read what is resonating and sharpen the signal from evidence.</p></div>
-            <div class="process-wall-week"><span>Week 6</span><strong>Leverage</strong><p>Build one practical AI workflow around a real bottleneck.</p></div>
-            <div class="process-wall-week"><span>Week 7</span><strong>Opportunity</strong><p>Connect trust and visibility to demand, proof, and conversations.</p></div>
-            <div class="process-wall-week"><span>Week 8</span><strong>Verification</strong><p>Show the transformation and enter Builderz World with proof.</p></div>
+          <div class="week-journey__map" aria-label="Cohort week plan">
+            <div class="wj-phase">
+              <div class="wj-phase__header">
+                <span class="wj-phase__roman">I</span>
+                <div>
+                  <strong class="wj-phase__name">Identity</strong>
+                  <span class="wj-phase__range">Weeks 0–2</span>
+                </div>
+              </div>
+              <div class="wj-steps">
+                <div class="wj-step wj-step--prep">
+                  <span class="wj-step__num">00</span>
+                  <strong>Threshold</strong>
+                </div>
+                <div class="wj-step">
+                  <span class="wj-step__num">01</span>
+                  <strong>Excavation</strong>
+                </div>
+                <div class="wj-step">
+                  <span class="wj-step__num">02</span>
+                  <strong>Crystallization</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="wj-arrow" aria-hidden="true">
+              <svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="7" x2="22" y2="7" stroke="currentColor" stroke-width="1"/><polyline points="16,1 22,7 16,13" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+
+            <div class="wj-phase">
+              <div class="wj-phase__header">
+                <span class="wj-phase__roman">II</span>
+                <div>
+                  <strong class="wj-phase__name">Signal</strong>
+                  <span class="wj-phase__range">Weeks 3–5</span>
+                </div>
+              </div>
+              <div class="wj-steps">
+                <div class="wj-step">
+                  <span class="wj-step__num">03</span>
+                  <strong>Attention</strong>
+                </div>
+                <div class="wj-step">
+                  <span class="wj-step__num">04</span>
+                  <strong>Traction</strong>
+                </div>
+                <div class="wj-step">
+                  <span class="wj-step__num">05</span>
+                  <strong>Calibration</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="wj-arrow" aria-hidden="true">
+              <svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="7" x2="22" y2="7" stroke="currentColor" stroke-width="1"/><polyline points="16,1 22,7 16,13" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+
+            <div class="wj-phase">
+              <div class="wj-phase__header">
+                <span class="wj-phase__roman">III</span>
+                <div>
+                  <strong class="wj-phase__name">Leverage</strong>
+                  <span class="wj-phase__range">Weeks 6–8</span>
+                </div>
+              </div>
+              <div class="wj-steps">
+                <div class="wj-step">
+                  <span class="wj-step__num">06</span>
+                  <strong>Leverage</strong>
+                </div>
+                <div class="wj-step">
+                  <span class="wj-step__num">07</span>
+                  <strong>Opportunity</strong>
+                </div>
+                <div class="wj-step">
+                  <span class="wj-step__num">08</span>
+                  <strong>Verification</strong>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
