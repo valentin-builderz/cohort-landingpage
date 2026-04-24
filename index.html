@@ -7,7 +7,7 @@
   <meta name="description" content="AI is commoditizing every skill that fits in a process doc. Builderz World is an 8-week cohort to find your Zone of Genius, build a brand around it, and use AI as a multiplier, not a replacement.">
   <link rel="canonical" href="https://builderz.world/">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#06111f">
+  <meta name="theme-color" content="#0B2117">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Builderz World">
   <meta property="og:title" content="Builderz World - Build around your genius.">
@@ -26,16 +26,1340 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       Verdant Editorial — on-brand rebuild of Builderz World
+       ============================================================ */
+    :root {
+      --bg: #0B2117;
+      --bg-2: #122D22;
+      --surface: #193A2E;
+      --surface-2: #1E4637;
+      --bright: #FFFFFF;
+      --text: #FFFFFF;
+      --muted: #A3B5AE;
+      --accent: #ABFFC0;
+      --accent-soft: rgba(171, 255, 192, 0.28);
+      --accent-rim: rgba(171, 255, 192, 0.22);
+      --accent-glow: rgba(171, 255, 192, 0.08);
+      --border: rgba(255, 255, 255, 0.1);
+      --border-strong: rgba(255, 255, 255, 0.18);
+      --serif: 'Noto Serif', Georgia, 'Times New Roman', serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --container: 1200px;
+      --radius-sm: 16px;
+      --radius: 24px;
+      --radius-lg: 32px;
+      --pill: 100px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--muted); color: var(--bg); }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin: 0 0 0.4em;
+      color: var(--text);
+    }
+    h1 { font-size: clamp(44px, 6.5vw, 80px); }
+    h2 { font-size: clamp(34px, 4.8vw, 56px); line-height: 1.12; }
+    h3 { font-size: clamp(24px, 2.8vw, 40px); line-height: 1.2; }
+    p { margin: 0 0 1em; }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+    }
+
+    .eyebrow, .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 20px;
+    }
+    .eyebrow::before, .section-eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.85;
+    }
+    .section-desc {
+      font-size: 20px;
+      line-height: 1.55;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    /* Buttons (pill, slim) */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: -0.005em;
+      line-height: 1.2;
+      padding: 10px 26px;
+      border-radius: var(--pill);
+      border: 1px solid transparent;
+      transition: transform .3s ease, background .3s ease, color .3s ease, border-color .3s ease, opacity .3s ease, box-shadow .4s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--bright);
+      color: var(--bg);
+      border-color: var(--bright);
+    }
+    .btn-primary:hover { transform: translateY(-1px); opacity: 1; }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--bright);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+
+    /* Arrow glyph on primary/white CTAs */
+    .btn-primary::after,
+    .nav-cta::after {
+      content: "→";
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 1em;
+      margin-left: 2px;
+      display: inline-block;
+      transition: transform .3s ease;
+    }
+    .btn-primary:hover::after,
+    .nav-cta:hover::after { transform: translateX(3px); }
+
+    /* Section spacing */
+    section { position: relative; padding: clamp(80px, 12vw, 160px) 0; }
+    section + section { padding-top: clamp(60px, 10vw, 120px); }
+    .section-header { max-width: 820px; margin: 0 0 64px; }
+
+    /* ============================================================
+       NAV
+       ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 0;
+      background: rgba(11, 33, 23, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--serif);
+      font-size: 20px;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo__dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(171,255,192,0.65);
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .nav-links a { transition: color .25s ease; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: var(--pill);
+      background: var(--bright);
+      color: var(--bg);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.2;
+      transition: opacity .25s ease, transform .25s ease, box-shadow .4s ease;
+    }
+    .nav-cta:hover {
+      opacity: 1;
+      transform: translateY(-1px);
+      box-shadow: 0 0 0 1px rgba(171,255,192,0.5), 0 0 20px -4px rgba(171,255,192,0.4);
+    }
+    .nav-toggle {
+      display: none;
+      width: 40px; height: 40px;
+      background: transparent;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--pill);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 16px; height: 1.5px;
+      background: var(--text);
+      border-radius: 2px;
+    }
+    .mobile-menu {
+      display: none;
+      padding: 24px 24px 32px;
+      gap: 20px;
+      flex-direction: column;
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+      font-size: 17px;
+    }
+    .mobile-menu.is-open { display: flex; }
+    .mobile-menu a { color: var(--muted); }
+    .mobile-menu .mobile-cta {
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background: var(--bright);
+      color: var(--bg);
+      border-radius: var(--pill);
+      text-align: center;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+    .mobile-menu .mobile-cta::after {
+      content: "→";
+      font-weight: 500;
+    }
+
+    @media (max-width: 880px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-toggle { display: flex; }
+    }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      padding: 180px 0 clamp(100px, 12vw, 160px);
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(1200px 600px at 70% 20%, rgba(163,181,174,0.12), transparent 60%),
+        radial-gradient(900px 500px at 15% 80%, rgba(25, 58, 46, 0.9), transparent 60%),
+        var(--bg);
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 28px;
+    }
+    .hero-eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .hero-title {
+      font-size: clamp(46px, 7vw, 88px);
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+      max-width: 980px;
+      margin: 0 0 28px;
+    }
+    .hero-title__accent {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-subtitle {
+      font-size: clamp(18px, 1.6vw, 22px);
+      color: var(--muted);
+      max-width: 680px;
+      line-height: 1.55;
+      margin: 0 0 36px;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border: 1px solid var(--accent-rim);
+      border-radius: var(--pill);
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      color: var(--accent);
+      background: var(--accent-glow);
+    }
+    .hero-pill::before {
+      content: "";
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* ============================================================
+       PROBLEM
+       ============================================================ */
+    .problem { background: var(--bg-2); }
+    .problem-card {
+      background: var(--surface);
+      border: 1px solid var(--accent-rim);
+      border-radius: var(--radius-lg);
+      padding: clamp(40px, 5vw, 64px);
+      box-shadow: 0 0 0 1px var(--accent-glow) inset, 0 30px 80px -40px rgba(171,255,192,0.18);
+    }
+    .problem-copy p { font-size: 18px; line-height: 1.65; color: var(--muted); max-width: 760px; }
+    .problem-copy .problem-lead {
+      font-family: var(--serif);
+      font-size: clamp(24px, 2.6vw, 32px);
+      color: var(--text);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .problem-question {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(22px, 2.2vw, 28px);
+      color: var(--accent);
+      margin-top: 32px;
+      line-height: 1.3;
+    }
+    .problem-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .stat {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .stat-kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .stat-title {
+      font-family: var(--serif);
+      font-size: 24px;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      color: var(--text);
+    }
+    .stat-label { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+    /* ============================================================
+       BIG QUOTE
+       ============================================================ */
+    .big-quote {
+      margin: 0 auto;
+      max-width: 980px;
+      text-align: center;
+      font-family: var(--serif);
+    }
+    .big-quote p {
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+    .big-quote cite {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-style: normal;
+      font-family: var(--sans);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .big-quote cite::before {
+      content: "";
+      display: inline-block;
+      width: 28px; height: 1px;
+      background: var(--accent);
+    }
+
+    /* ============================================================
+       REEL (infinite marquee of cards)
+       ============================================================ */
+    .reel-section { padding: 40px 0 120px; }
+    .reel-track-wrap {
+      position: relative;
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+    .reel-track {
+      display: flex;
+      gap: 24px;
+      animation: reelScroll 60s linear infinite;
+      width: max-content;
+      will-change: transform;
+    }
+    .reel-card {
+      flex: 0 0 320px;
+      min-height: 220px;
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .reel-card__kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .reel-card__text {
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      margin: 0;
+    }
+    @keyframes reelScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .reel-section:hover .reel-track { animation-play-state: paused; }
+
+    /* ============================================================
+       REFRAME
+       ============================================================ */
+    .reframe { background: var(--bg-2); }
+    .reframe-glass {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--accent-rim);
+      border-radius: var(--radius-lg);
+      padding: clamp(40px, 5vw, 72px);
+      box-shadow: 0 0 0 1px var(--accent-glow) inset, 0 40px 80px -40px rgba(171,255,192,0.18);
+    }
+    .reframe-glass h2 {
+      font-size: clamp(30px, 3.8vw, 48px);
+      line-height: 1.15;
+    }
+    .reframe-body, .reframe-highlight {
+      font-size: 19px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+    .reframe-highlight {
+      color: var(--text);
+      border-left: 2px solid var(--accent);
+      padding-left: 24px;
+      margin: 28px 0;
+    }
+    .reframe-turn {
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.2vw, 28px);
+      color: var(--text);
+      margin-top: 28px;
+    }
+
+    /* ============================================================
+       HOPE (The Work)
+       ============================================================ */
+    .hope-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hope-copy p { font-size: 19px; color: var(--muted); line-height: 1.65; max-width: 540px; }
+    .hope-image {
+      aspect-ratio: 4 / 5;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .hope-image img { width: 100%; height: 100%; object-fit: cover; }
+    @media (max-width: 860px) { .hope-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+    /* ============================================================
+       PROTOCOL / PROCESS
+       ============================================================ */
+    .protocol { background: var(--bg); }
+    .process-board {
+      display: grid;
+      gap: 80px;
+    }
+    .process-overview {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .process-overview__heading h3 {
+      font-size: clamp(28px, 3.2vw, 40px);
+      line-height: 1.2;
+    }
+    .process-board__kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+      display: block;
+    }
+    .process-overview__heading p { color: var(--muted); font-size: 17px; line-height: 1.6; }
+    .process-wall-plan {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .process-wall-week {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-height: 180px;
+    }
+    .process-wall-week--prep { background: var(--bg-2); border-style: dashed; }
+    .process-wall-week span {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .process-wall-week strong {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: -0.015em;
+    }
+    .process-wall-week p { font-size: 14px; color: var(--muted); margin: 8px 0 0; line-height: 1.55; }
+    @media (max-width: 960px) {
+      .process-overview { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    .process-focus {
+      background: var(--bg-2);
+      border: 1px solid var(--accent-rim);
+      border-radius: var(--radius-lg);
+      padding: clamp(32px, 4vw, 56px);
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      box-shadow: 0 0 0 1px var(--accent-glow) inset, 0 40px 80px -50px rgba(171,255,192,0.18);
+    }
+    .process-week-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .process-step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+      column-gap: 14px;
+      row-gap: 2px;
+      align-items: center;
+      padding: 14px 18px;
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      background: transparent;
+      color: var(--muted);
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: all .25s ease;
+    }
+    .process-step__count {
+      grid-row: 1 / 3;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      opacity: 0.7;
+      align-self: center;
+    }
+    .process-step strong { font-weight: 600; color: var(--text); font-size: 14px; }
+    .process-step em { font-style: normal; font-size: 12px; letter-spacing: 0.06em; color: var(--muted); }
+    .process-step:hover { background: rgba(255,255,255,0.04); }
+    .process-step.is-active {
+      background: var(--surface);
+      border-color: var(--accent-rim);
+      box-shadow: 0 0 0 1px var(--accent-glow) inset;
+    }
+    .process-step.is-active strong { color: var(--text); }
+    .process-step.is-active em { color: var(--muted); }
+    .process-step.is-active .process-step__count { color: var(--accent); opacity: 1; }
+
+    .process-focus__content { min-height: 420px; }
+    .process-copy { display: none; }
+    .process-copy.is-active { display: block; animation: fadeIn .4s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    .process-copy > span {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 14px;
+    }
+    .process-copy h3 { font-size: clamp(26px, 3vw, 36px); margin-bottom: 20px; }
+    .process-copy > p { color: var(--muted); font-size: 17px; line-height: 1.65; max-width: 640px; }
+    .process-week-grid {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .process-week-grid > div {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .process-week-grid b {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .process-week-grid strong {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 19px;
+      color: var(--text);
+      letter-spacing: -0.015em;
+    }
+    .process-week-grid p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.6; }
+
+    @media (max-width: 900px) {
+      .process-focus { grid-template-columns: 1fr; }
+      .process-week-nav { flex-direction: row; overflow-x: auto; padding-bottom: 6px; }
+      .process-week-nav::-webkit-scrollbar { height: 6px; }
+      .process-step { flex: 0 0 auto; min-width: 160px; }
+    }
+
+    /* ============================================================
+       FOUNDER
+       ============================================================ */
+    .founder { background: var(--bg-2); }
+    .founder-content { max-width: 780px; margin: 0 auto; text-align: center; }
+    .founder-content h2 { font-size: clamp(36px, 4.6vw, 56px); margin-bottom: 28px; }
+    .founder-bio, .founder-belief {
+      font-size: 19px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .founder-belief {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--accent);
+      font-size: clamp(22px, 2.4vw, 28px);
+      line-height: 1.4;
+      letter-spacing: -0.015em;
+      margin-top: 32px;
+    }
+
+    /* ============================================================
+       PROOF
+       ============================================================ */
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+    .proof-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .proof-card-image {
+      aspect-ratio: 16 / 10;
+      background: var(--bg-2);
+      overflow: hidden;
+    }
+    .proof-card-image img { width: 100%; height: 100%; object-fit: cover; }
+    .proof-card-body { padding: 40px; display: flex; flex-direction: column; gap: 18px; }
+    .proof-tag {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 6px 14px;
+      border-radius: var(--pill);
+      background: var(--accent-glow);
+      border: 1px solid var(--accent-rim);
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .proof-story { font-size: 17px; line-height: 1.6; color: var(--muted); margin: 0; }
+    .proof-result {
+      font-family: var(--serif);
+      color: var(--text);
+      font-size: 21px;
+      line-height: 1.35;
+      letter-spacing: -0.015em;
+      margin: 0;
+    }
+
+    /* ============================================================
+       PRICING
+       ============================================================ */
+    .pricing { background: var(--bg-2); }
+    .pricing-card {
+      max-width: 1080px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--accent-rim);
+      border-radius: var(--radius-lg);
+      padding: clamp(32px, 4vw, 56px);
+      box-shadow: 0 0 0 1px var(--accent-glow) inset, 0 40px 80px -50px rgba(171,255,192,0.2);
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 48px;
+    }
+    .pricing-label {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .pricing-value-stack { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
+    .pricing-value-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pricing-value-row strong {
+      font-family: var(--serif);
+      font-weight: 500;
+      color: var(--text);
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .pricing-value-row span { color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .pricing-value-row b {
+      font-family: var(--sans);
+      font-weight: 600;
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .pricing-value-total {
+      margin-top: 28px;
+      padding: 24px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .pricing-value-total span { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+    .pricing-value-total strong { font-family: var(--serif); font-size: 32px; color: var(--text); letter-spacing: -0.02em; }
+    .pricing-value-total p { margin: 0; color: var(--muted); font-size: 14px; }
+    .pricing-summary { margin-top: 20px; color: var(--muted); font-size: 15px; line-height: 1.6; }
+
+    .pricing-actual {
+      background: var(--bg-2);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius);
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .pricing-timer {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: rgba(0,0,0,0.25);
+    }
+    .pricing-timer__label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .pricing-timer__digits {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      font-family: var(--serif);
+      font-size: 28px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+    .pricing-timer__unit small {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-left: 3px;
+      font-weight: 500;
+    }
+    .pricing-timer__sep { color: var(--muted); }
+    .pricing-amount {
+      font-family: var(--serif);
+      font-size: clamp(48px, 6vw, 72px);
+      line-height: 1;
+      letter-spacing: -0.025em;
+      margin: 6px 0 2px;
+      color: var(--accent);
+    }
+    .pricing-amount-full { color: var(--muted); font-size: 15px; margin: 0; }
+    .pricing-amount-full del { opacity: 0.7; margin-right: 8px; }
+    .pricing-scarcity { color: var(--muted); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin: 6px 0 0; }
+    .pricing-note { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 8px 0 14px; }
+    .pricing-actual .btn-primary { align-self: flex-start; }
+
+    .fit-card {
+      max-width: 1080px;
+      margin: 48px auto 0;
+      background: transparent;
+      border: 1px dashed var(--border-strong);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+    }
+    .fit-card h3 { font-size: clamp(22px, 2.4vw, 28px); margin: 0 0 10px; }
+    .fit-card p { color: var(--muted); margin: 0; font-size: 16px; line-height: 1.6; }
+
+    @media (max-width: 860px) { .pricing-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+    /* ============================================================
+       TESTIMONIAL STRIP
+       ============================================================ */
+    .testimonial-strip {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      overflow: hidden;
+    }
+    .testimonial-strip__track {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      width: max-content;
+      animation: stripScroll 60s linear infinite;
+      font-family: var(--serif);
+      font-size: clamp(18px, 1.6vw, 22px);
+      font-style: italic;
+      color: var(--muted);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+    .testimonial-strip__track p { margin: 0; }
+    .testimonial-strip__track span { color: var(--border-strong); font-style: normal; font-size: 30px; }
+    @keyframes stripScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      font-family: var(--serif);
+      font-size: clamp(18px, 1.8vw, 22px);
+      color: var(--text);
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+";
+      font-family: var(--sans);
+      font-size: 24px;
+      color: var(--accent);
+      transition: transform .3s ease;
+      flex: 0 0 auto;
+    }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-answer {
+      padding: 0 32px 28px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0;
+      max-width: 720px;
+    }
+
+    /* ============================================================
+       COMPARISON
+       ============================================================ */
+    .comparison-board {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .comparison-column {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+    .comparison-column--old { background: var(--bg-2); opacity: 0.88; }
+    .comparison-column--new {
+      background: var(--surface-2);
+      border-color: var(--accent-rim);
+      box-shadow: 0 0 0 1px var(--accent-glow) inset, 0 30px 70px -50px rgba(171,255,192,0.2);
+    }
+    .comparison-column__header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .comparison-mark {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: var(--muted);
+      font-family: var(--sans);
+    }
+    .comparison-column--new .comparison-mark { background: var(--accent); color: var(--bg); border-color: var(--accent); box-shadow: 0 0 20px -4px rgba(171,255,192,0.4); }
+    .comparison-column__header p {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 2px;
+    }
+    .comparison-column--new .comparison-column__header p { color: var(--accent); }
+    .comparison-column__header h3 { font-size: clamp(22px, 2.4vw, 28px); margin: 0; }
+    .comparison-steps {
+      list-style: none;
+      counter-reset: step;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .comparison-steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: baseline;
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .comparison-steps li::before {
+      content: counter(step, decimal-leading-zero);
+      font-family: var(--serif);
+      font-size: 14px;
+      color: var(--muted);
+      opacity: 0.7;
+      letter-spacing: 0.06em;
+    }
+    .comparison-column--new .comparison-steps li::before { color: var(--accent); opacity: 1; }
+    .comparison-column--new .comparison-steps li { color: var(--text); }
+    @media (max-width: 780px) { .comparison-board { grid-template-columns: 1fr; } }
+
+    /* ============================================================
+       FINAL CTA
+       ============================================================ */
+    .final-cta {
+      background:
+        radial-gradient(800px 400px at 50% 0%, rgba(163,181,174,0.12), transparent 60%),
+        var(--bg-2);
+      padding: clamp(90px, 12vw, 160px) 0;
+      text-align: center;
+    }
+    .final-content { max-width: 820px; margin: 0 auto; }
+    .final-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 24px;
+    }
+    .final-eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .final-content h2 { font-size: clamp(36px, 5vw, 60px); margin-bottom: 32px; }
+    .final-question {
+      font-family: var(--serif);
+      font-size: clamp(20px, 2.2vw, 26px);
+      color: var(--muted);
+      line-height: 1.4;
+      margin-bottom: 36px;
+    }
+    .final-pillars {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .final-pillars span {
+      padding: 8px 18px;
+      border: 1px solid var(--accent-rim);
+      border-radius: var(--pill);
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+      background: var(--accent-glow);
+    }
+    .final-note {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      padding: 64px 0 32px;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-brand { max-width: 340px; }
+    .footer-logo { font-family: var(--serif); font-size: 22px; display: block; margin-bottom: 10px; }
+    .footer-tagline { color: var(--muted); font-size: 14px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 28px; font-size: 14px; color: var(--muted); }
+    .footer-links a:hover { color: var(--text); }
+    .footer-bottom { padding-top: 32px; color: var(--muted); font-size: 13px; }
+
+    /* ============================================================
+       BOOKING MODAL
+       ============================================================ */
+    .booking-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 33, 23, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 200;
+    }
+    .booking-overlay.is-open { display: flex; }
+    .booking-modal {
+      width: 100%;
+      max-width: 720px;
+      max-height: 90vh;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      overflow: auto;
+      position: relative;
+    }
+    .booking-close {
+      position: absolute;
+      top: 20px; right: 20px;
+      width: 40px; height: 40px;
+      border-radius: var(--pill);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .booking-close:hover { background: rgba(255,255,255,0.12); }
+    .booking-brand { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 10px; }
+    .booking-title { font-size: clamp(24px, 3vw, 32px); margin-bottom: 10px; }
+    .booking-desc { color: var(--muted); font-size: 15px; line-height: 1.6; margin-bottom: 24px; }
+    .booking-embed { width: 100%; height: 420px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--bg); position: relative; }
+    .booking-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .booking-fallback { padding: 20px; color: var(--muted); text-align: center; font-size: 14px; }
+    .booking-fallback a { color: var(--text); text-decoration: underline; }
+
+    /* ============================================================
+       REVEAL ANIM
+       ============================================================ */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* ============================================================
+       HOVER IGNITE — rim brightens + glow pours in from the top
+       matches the lit-edge, top-weighted gradient in the reference
+       ============================================================ */
+    .problem-card,
+    .reframe-glass,
+    .process-focus,
+    .pricing-card,
+    .pricing-actual,
+    .faq-card,
+    .comparison-column,
+    .stat,
+    .reel-card,
+    .process-wall-week,
+    .process-week-grid > div,
+    .proof-card,
+    .fit-card,
+    .hero-pill,
+    .final-pillars span,
+    .proof-tag,
+    .booking-modal {
+      transition:
+        border-color .45s ease,
+        box-shadow .45s ease,
+        background-color .45s ease,
+        color .3s ease,
+        transform .45s ease;
+    }
+
+    /* Large frames — a full "lit panel" effect */
+    .problem-card:hover,
+    .reframe-glass:hover,
+    .process-focus:hover,
+    .pricing-card:hover,
+    .faq-card:hover,
+    .comparison-column:hover,
+    .proof-card:hover,
+    .booking-modal:hover {
+      border-color: rgba(171, 255, 192, 0.72);
+      box-shadow:
+        inset 0 1px 0 rgba(171, 255, 192, 0.65),
+        inset 0 60px 110px -60px rgba(171, 255, 192, 0.38),
+        inset 0 0 0 1px rgba(171, 255, 192, 0.1),
+        0 28px 80px -30px rgba(171, 255, 192, 0.32),
+        0 0 40px -8px rgba(171, 255, 192, 0.22);
+    }
+
+    /* Medium tiles — slightly lighter lift + inner glow */
+    .stat:hover,
+    .reel-card:hover,
+    .process-wall-week:hover,
+    .process-week-grid > div:hover,
+    .fit-card:hover {
+      border-color: rgba(171, 255, 192, 0.6);
+      box-shadow:
+        inset 0 1px 0 rgba(171, 255, 192, 0.5),
+        inset 0 38px 70px -40px rgba(171, 255, 192, 0.3),
+        0 16px 44px -18px rgba(171, 255, 192, 0.26);
+      transform: translateY(-2px);
+    }
+
+    /* Pills and tags — crisp rim ignition, no inner gradient */
+    .hero-pill:hover,
+    .final-pillars span:hover,
+    .proof-tag:hover {
+      border-color: rgba(171, 255, 192, 0.85);
+      color: var(--accent);
+      background: rgba(171, 255, 192, 0.1);
+      box-shadow:
+        inset 0 0 0 1px rgba(171, 255, 192, 0.25),
+        0 0 20px -4px rgba(171, 255, 192, 0.45);
+    }
+
+    /* FAQ row hover — warm the line and ignite the + */
+    .faq-item { transition: background-color .35s ease; }
+    .faq-item:hover { background: rgba(171, 255, 192, 0.04); }
+    .faq-item:hover summary::after { color: var(--accent); text-shadow: 0 0 12px rgba(171,255,192,0.6); }
+
+    /* Nav links — soft mint on hover */
+    .nav-links a { transition: color .3s ease, text-shadow .3s ease; }
+    .nav-links a:hover { color: var(--accent); text-shadow: 0 0 12px rgba(171,255,192,0.35); }
+
+    /* Footer links pick up the same feel */
+    .footer-links a { transition: color .3s ease; }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* Primary CTA gains a subtle mint halo on hover */
+    .btn-primary { transition: transform .3s ease, box-shadow .4s ease, opacity .3s ease; }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      opacity: 1;
+      box-shadow: 0 0 0 1px rgba(171,255,192,0.6), 0 0 30px -4px rgba(171,255,192,0.5);
+    }
+
+    /* Ghost CTA ignites its outline */
+    .btn-ghost { transition: border-color .4s ease, color .3s ease, background-color .4s ease, box-shadow .4s ease; }
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(171,255,192,0.06);
+      box-shadow: inset 0 0 0 1px rgba(171,255,192,0.2), 0 0 20px -4px rgba(171,255,192,0.35);
+    }
+
+    /* Process tab steps — ignite on hover */
+    .process-step:hover {
+      border-color: rgba(171, 255, 192, 0.35);
+      box-shadow: inset 0 1px 0 rgba(171,255,192,0.3);
+    }
+    .process-step:hover .process-step__count { color: var(--accent); opacity: 1; }
+
+    /* Nav logo dot — gentle breathing so the page feels "on" at rest */
+    @keyframes dotPulse {
+      0%, 100% { box-shadow: 0 0 12px rgba(171,255,192,0.4); }
+      50%      { box-shadow: 0 0 22px rgba(171,255,192,0.85); }
+    }
+    .nav-logo__dot { animation: dotPulse 3.2s ease-in-out infinite; }
+
+    /* Respect reduced-motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      .nav-logo__dot { animation: none; }
+      .reel-track, .testimonial-strip__track { animation: none; }
+      * { transition-duration: 0.01ms !important; }
+    }
+
+    /* SR-only */
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0);
+      white-space: nowrap; border: 0;
+    }
+  </style>
 </head>
 <body>
-  <div class="site-backdrop" aria-hidden="true">
-    <div class="site-backdrop-base"></div>
-    <div class="site-backdrop-noise"></div>
-    <div class="site-backdrop-dots"></div>
-  </div>
+
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
@@ -65,11 +1389,8 @@
     </div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg">
-      <img src="assets/asset 01 - hero bg.png" alt="A figure standing above a glowing landscape at dusk">
-      <div class="hero-overlay"></div>
-    </div>
     <div class="container">
       <div class="hero-content reveal">
         <p class="hero-eyebrow">8-week cohort · Applications open</p>
@@ -82,67 +1403,51 @@
         </div>
         <div class="hero-actions">
           <a href="#pricingApply" class="btn btn-primary">Apply for the next cohort</a>
-          <a href="#architecture" class="btn btn-ghost">How it works</a>
+          <a href="#framework" class="btn btn-ghost">How it works</a>
         </div>
       </div>
     </div>
-    <div class="scroll-indicator" aria-hidden="true">
-      <div class="scroll-line"></div>
-    </div>
   </section>
 
-  <div class="hero-depth-layer" aria-hidden="true">
-    <div class="hero-depth-media">
-      <img src="assets/asset 01 - hero bg.png" alt="">
-      <div class="hero-depth-overlay"></div>
-    </div>
-  </div>
-
-  <section class="problem layer-card layer-card--blue" id="problem">
+  <!-- PROBLEM -->
+  <section class="problem" id="problem">
     <div class="container">
-      <div class="problem-stage reveal">
-        <div class="problem-image-card">
-          <div class="problem-image-wrap">
-            <img src="assets/asset 03 - problem image.png" alt="A person at a desk facing a bright digital glow">
-          </div>
+      <div class="problem-card reveal">
+        <div class="section-header problem-header">
+          <p class="section-eyebrow">The Shift</p>
+          <h2 class="section-title">Every skill that fits in a process doc is getting commoditized. What's left is what AI cannot describe.</h2>
+          <p class="section-desc">That is not a crisis for everyone. For the people who know where their genius lives, it is the best possible market condition.</p>
+        </div>
 
-          <div class="problem-card">
-          <div class="section-header problem-header">
-            <p class="section-eyebrow">The Shift</p>
-            <h2 class="section-title">Every skill that fits in a process doc is getting commoditized. What's left is what AI cannot describe.</h2>
-            <p class="section-desc">That is not a crisis for everyone. For the people who know where their genius lives, it is the best possible market condition.</p>
-          </div>
+        <div class="problem-copy">
+          <p class="problem-lead">Most people will try to outrun this with more output.</p>
+          <p>More tools. More content. More efficiency. But if AI is compressing the value of generic competence, working faster is not enough.</p>
+          <p>The people who come out ahead will not be the best prompt engineers. They will be the ones who know what is actually theirs, then build something the market can feel before the conversation even starts.</p>
+          <p class="problem-question">Do you know where your genius lives?</p>
+        </div>
 
-          <div class="problem-copy">
-            <p class="problem-lead">Most people will try to outrun this with more output.</p>
-            <p>More tools. More content. More efficiency. But if AI is compressing the value of generic competence, working faster is not enough.</p>
-            <p>The people who come out ahead will not be the best prompt engineers. They will be the ones who know what is actually theirs, then build something the market can feel before the conversation even starts.</p>
-            <p class="problem-question">Do you know where your genius lives?</p>
+        <div class="problem-stats">
+          <div class="stat">
+            <span class="stat-kicker">What Breaks</span>
+            <span class="stat-title">Skills that fit in a doc</span>
+            <span class="stat-label">If your best work can be summarized in a process document, it will be replicated. The middle is getting squeezed from both ends.</span>
           </div>
-
-          <div class="problem-stats">
-            <div class="stat">
-              <span class="stat-kicker">What Breaks</span>
-              <span class="stat-title">Skills that fit in a doc</span>
-              <span class="stat-label">If your best work can be summarized in a process document, it will be replicated. The middle is getting squeezed from both ends.</span>
-            </div>
-            <div class="stat">
-              <span class="stat-kicker">What Holds</span>
-              <span class="stat-title">What only you can do</span>
-              <span class="stat-label">A clear point of view, a recognizable voice, and work that feels attached to a specific human, not a category template.</span>
-            </div>
-            <div class="stat">
-              <span class="stat-kicker">What Scales</span>
-              <span class="stat-title">Your edge × AI</span>
-              <span class="stat-label">Once you know what is actually yours, AI stops being a threat and starts being the multiplier. It amplifies the signal instead of replacing it.</span>
-            </div>
+          <div class="stat">
+            <span class="stat-kicker">What Holds</span>
+            <span class="stat-title">What only you can do</span>
+            <span class="stat-label">A clear point of view, a recognizable voice, and work that feels attached to a specific human, not a category template.</span>
           </div>
-          </div><!-- /problem-card -->
-        </div><!-- /problem-image-card -->
-      </div><!-- /problem-stage -->
+          <div class="stat">
+            <span class="stat-kicker">What Scales</span>
+            <span class="stat-title">Your edge × AI</span>
+            <span class="stat-label">Once you know what is actually yours, AI stops being a threat and starts being the multiplier. It amplifies the signal instead of replacing it.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- QUOTE -->
   <section class="quote-section">
     <div class="container">
       <blockquote class="big-quote reveal">
@@ -152,83 +1457,33 @@
     </div>
   </section>
 
+  <!-- REEL -->
   <section class="reel-section" aria-label="What you build in Builderz World">
     <div class="reel-track-wrap">
       <div class="reel-track">
-        <div class="reel-card">
-          <span class="reel-card__kicker">Zone of Genius</span>
-          <p class="reel-card__text">Discover what only you can do — the work that can never be fully replicated</p>
-        </div>
-        <div class="reel-card">
-          <span class="reel-card__kicker">Personal Signal</span>
-          <p class="reel-card__text">Become the obvious choice before any conversation even begins</p>
-        </div>
-        <div class="reel-card">
-          <span class="reel-card__kicker">AI Leverage</span>
-          <p class="reel-card__text">Use AI to amplify your edge — not flatten your judgment into generic output</p>
-        </div>
-        <div class="reel-card">
-          <span class="reel-card__kicker">8 Weeks</span>
-          <p class="reel-card__text">From raw identity material to visible authority with a system that keeps working</p>
-        </div>
-        <div class="reel-card">
-          <span class="reel-card__kicker">The Room</span>
-          <p class="reel-card__text">A small cohort of people doing serious work — the room that raises the standard</p>
-        </div>
-        <div class="reel-card">
-          <span class="reel-card__kicker">Big Life Thinking</span>
-          <p class="reel-card__text">Make sure your best decade is pointed at something that was actually worth it</p>
-        </div>
-        <div class="reel-card">
-          <span class="reel-card__kicker">Positioning</span>
-          <p class="reel-card__text">Stop fighting for attention in a category. Build signal so sharp the right people come to you</p>
-        </div>
-        <div class="reel-card">
-          <span class="reel-card__kicker">Market Recognition</span>
-          <p class="reel-card__text">Let the right prospects recognize themselves in your work before the first conversation</p>
-        </div>
-        <!-- Duplicate set for seamless infinite loop -->
-        <div class="reel-card" aria-hidden="true">
-          <span class="reel-card__kicker">Zone of Genius</span>
-          <p class="reel-card__text">Discover what only you can do — the work that can never be fully replicated</p>
-        </div>
-        <div class="reel-card" aria-hidden="true">
-          <span class="reel-card__kicker">Personal Signal</span>
-          <p class="reel-card__text">Become the obvious choice before any conversation even begins</p>
-        </div>
-        <div class="reel-card" aria-hidden="true">
-          <span class="reel-card__kicker">AI Leverage</span>
-          <p class="reel-card__text">Use AI to amplify your edge — not flatten your judgment into generic output</p>
-        </div>
-        <div class="reel-card" aria-hidden="true">
-          <span class="reel-card__kicker">8 Weeks</span>
-          <p class="reel-card__text">From raw identity material to visible authority with a system that keeps working</p>
-        </div>
-        <div class="reel-card" aria-hidden="true">
-          <span class="reel-card__kicker">The Room</span>
-          <p class="reel-card__text">A small cohort of people doing serious work — the room that raises the standard</p>
-        </div>
-        <div class="reel-card" aria-hidden="true">
-          <span class="reel-card__kicker">Big Life Thinking</span>
-          <p class="reel-card__text">Make sure your best decade is pointed at something that was actually worth it</p>
-        </div>
-        <div class="reel-card" aria-hidden="true">
-          <span class="reel-card__kicker">Positioning</span>
-          <p class="reel-card__text">Stop fighting for attention in a category. Build signal so sharp the right people come to you</p>
-        </div>
-        <div class="reel-card" aria-hidden="true">
-          <span class="reel-card__kicker">Market Recognition</span>
-          <p class="reel-card__text">Let the right prospects recognize themselves in your work before the first conversation</p>
-        </div>
+        <div class="reel-card"><span class="reel-card__kicker">Zone of Genius</span><p class="reel-card__text">Discover what only you can do — the work that can never be fully replicated</p></div>
+        <div class="reel-card"><span class="reel-card__kicker">Personal Signal</span><p class="reel-card__text">Become the obvious choice before any conversation even begins</p></div>
+        <div class="reel-card"><span class="reel-card__kicker">AI Leverage</span><p class="reel-card__text">Use AI to amplify your edge — not flatten your judgment into generic output</p></div>
+        <div class="reel-card"><span class="reel-card__kicker">8 Weeks</span><p class="reel-card__text">From raw identity material to visible authority with a system that keeps working</p></div>
+        <div class="reel-card"><span class="reel-card__kicker">The Room</span><p class="reel-card__text">A small cohort of people doing serious work — the room that raises the standard</p></div>
+        <div class="reel-card"><span class="reel-card__kicker">Big Life Thinking</span><p class="reel-card__text">Make sure your best decade is pointed at something that was actually worth it</p></div>
+        <div class="reel-card"><span class="reel-card__kicker">Positioning</span><p class="reel-card__text">Stop fighting for attention in a category. Build signal so sharp the right people come to you</p></div>
+        <div class="reel-card"><span class="reel-card__kicker">Market Recognition</span><p class="reel-card__text">Let the right prospects recognize themselves in your work before the first conversation</p></div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="reel-card" aria-hidden="true"><span class="reel-card__kicker">Zone of Genius</span><p class="reel-card__text">Discover what only you can do — the work that can never be fully replicated</p></div>
+        <div class="reel-card" aria-hidden="true"><span class="reel-card__kicker">Personal Signal</span><p class="reel-card__text">Become the obvious choice before any conversation even begins</p></div>
+        <div class="reel-card" aria-hidden="true"><span class="reel-card__kicker">AI Leverage</span><p class="reel-card__text">Use AI to amplify your edge — not flatten your judgment into generic output</p></div>
+        <div class="reel-card" aria-hidden="true"><span class="reel-card__kicker">8 Weeks</span><p class="reel-card__text">From raw identity material to visible authority with a system that keeps working</p></div>
+        <div class="reel-card" aria-hidden="true"><span class="reel-card__kicker">The Room</span><p class="reel-card__text">A small cohort of people doing serious work — the room that raises the standard</p></div>
+        <div class="reel-card" aria-hidden="true"><span class="reel-card__kicker">Big Life Thinking</span><p class="reel-card__text">Make sure your best decade is pointed at something that was actually worth it</p></div>
+        <div class="reel-card" aria-hidden="true"><span class="reel-card__kicker">Positioning</span><p class="reel-card__text">Stop fighting for attention in a category. Build signal so sharp the right people come to you</p></div>
+        <div class="reel-card" aria-hidden="true"><span class="reel-card__kicker">Market Recognition</span><p class="reel-card__text">Let the right prospects recognize themselves in your work before the first conversation</p></div>
       </div>
     </div>
   </section>
 
-  <section class="reframe layer-card layer-card--blue">
-    <div class="reframe-bg">
-      <img src="assets/asset 05 - hope image.png" alt="A lone figure walking toward light on a quiet path">
-      <div class="reframe-overlay"></div>
-    </div>
+  <!-- REFRAME -->
+  <section class="reframe">
     <div class="container">
       <div class="reframe-content reveal">
         <div class="reframe-glass">
@@ -241,6 +1496,7 @@
     </div>
   </section>
 
+  <!-- HOPE / THE WORK -->
   <section class="hope" id="pillars">
     <div class="container">
       <div class="hope-grid reveal">
@@ -250,14 +1506,14 @@
           <p>You have ability. The question is whether it is organized around something worth your best decade. That is what this work is about.</p>
         </div>
         <div class="hope-image">
-          <img src="assets/asset 05 - hope image.png" alt="A lone figure walking toward light on a quiet path">
+          <img src="assets/asset 05 - hope image.png" alt="A lone figure walking toward light on a quiet path" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="protocol has-texture layer-card layer-card--white" id="framework">
-    <div class="texture-bg"><img src="assets/asset 06 - texture protocoll.png" alt=""></div>
+  <!-- PROTOCOL / PROCESS -->
+  <section class="protocol" id="framework">
     <div class="container">
       <div class="section-header reveal">
         <p class="section-eyebrow">The Process</p>
@@ -268,102 +1524,34 @@
       <div class="process-board reveal" aria-label="Builderz World process overview">
         <div class="process-overview">
           <div class="process-overview__heading">
-            <p class="process-board__kicker">The 8-week plan</p>
+            <span class="process-board__kicker">The 8-week plan</span>
             <h3>A simple map of what happens each week.</h3>
             <p>Week 0 gets the room ready. Weeks 1-8 move from identity, to signal, to leverage, to opportunity, to earned entry into Builderz World.</p>
           </div>
 
           <div class="process-wall-plan" aria-label="Cohort week plan">
-            <div class="process-wall-week process-wall-week--prep">
-              <span>Week 0</span>
-              <strong>Threshold</strong>
-              <p>Enter the room, meet the cohort, connect on LinkedIn, and set the Builder's Code.</p>
-            </div>
-            <div class="process-wall-week">
-              <span>Week 1</span>
-              <strong>Excavation</strong>
-              <p>Find the raw stories and patterns behind your Zone of Genius.</p>
-            </div>
-            <div class="process-wall-week">
-              <span>Week 2</span>
-              <strong>Crystallization</strong>
-              <p>Turn discovery into a Brand Brief and a clearer identity pitch.</p>
-            </div>
-            <div class="process-wall-week">
-              <span>Week 3</span>
-              <strong>Attention</strong>
-              <p>Learn notes, hooks, and writing that earns the right attention.</p>
-            </div>
-            <div class="process-wall-week">
-              <span>Week 4</span>
-              <strong>Traction</strong>
-              <p>Use commenting, DMs, and contribution to create social momentum.</p>
-            </div>
-            <div class="process-wall-week">
-              <span>Week 5</span>
-              <strong>Calibration</strong>
-              <p>Read what is resonating and sharpen the signal from evidence.</p>
-            </div>
-            <div class="process-wall-week">
-              <span>Week 6</span>
-              <strong>Leverage</strong>
-              <p>Build one practical AI workflow around a real bottleneck.</p>
-            </div>
-            <div class="process-wall-week">
-              <span>Week 7</span>
-              <strong>Opportunity</strong>
-              <p>Connect trust and visibility to demand, proof, and conversations.</p>
-            </div>
-            <div class="process-wall-week">
-              <span>Week 8</span>
-              <strong>Verification</strong>
-              <p>Show the transformation and enter Builderz World with proof.</p>
-            </div>
+            <div class="process-wall-week process-wall-week--prep"><span>Week 0</span><strong>Threshold</strong><p>Enter the room, meet the cohort, connect on LinkedIn, and set the Builder's Code.</p></div>
+            <div class="process-wall-week"><span>Week 1</span><strong>Excavation</strong><p>Find the raw stories and patterns behind your Zone of Genius.</p></div>
+            <div class="process-wall-week"><span>Week 2</span><strong>Crystallization</strong><p>Turn discovery into a Brand Brief and a clearer identity pitch.</p></div>
+            <div class="process-wall-week"><span>Week 3</span><strong>Attention</strong><p>Learn notes, hooks, and writing that earns the right attention.</p></div>
+            <div class="process-wall-week"><span>Week 4</span><strong>Traction</strong><p>Use commenting, DMs, and contribution to create social momentum.</p></div>
+            <div class="process-wall-week"><span>Week 5</span><strong>Calibration</strong><p>Read what is resonating and sharpen the signal from evidence.</p></div>
+            <div class="process-wall-week"><span>Week 6</span><strong>Leverage</strong><p>Build one practical AI workflow around a real bottleneck.</p></div>
+            <div class="process-wall-week"><span>Week 7</span><strong>Opportunity</strong><p>Connect trust and visibility to demand, proof, and conversations.</p></div>
+            <div class="process-wall-week"><span>Week 8</span><strong>Verification</strong><p>Show the transformation and enter Builderz World with proof.</p></div>
           </div>
         </div>
 
         <div class="process-focus">
           <div class="process-week-nav" role="tablist" aria-label="Builderz World week details">
-            <button class="process-step is-active" type="button" data-process-target="week-1" role="tab" aria-selected="true">
-              <span class="process-step__count">01</span>
-              <strong>Week 1</strong>
-              <em>Excavation</em>
-            </button>
-            <button class="process-step" type="button" data-process-target="week-2" role="tab" aria-selected="false">
-              <span class="process-step__count">02</span>
-              <strong>Week 2</strong>
-              <em>Crystallization</em>
-            </button>
-            <button class="process-step" type="button" data-process-target="week-3" role="tab" aria-selected="false">
-              <span class="process-step__count">03</span>
-              <strong>Week 3</strong>
-              <em>Attention</em>
-            </button>
-            <button class="process-step" type="button" data-process-target="week-4" role="tab" aria-selected="false">
-              <span class="process-step__count">04</span>
-              <strong>Week 4</strong>
-              <em>Traction</em>
-            </button>
-            <button class="process-step" type="button" data-process-target="week-5" role="tab" aria-selected="false">
-              <span class="process-step__count">05</span>
-              <strong>Week 5</strong>
-              <em>Calibration</em>
-            </button>
-            <button class="process-step" type="button" data-process-target="week-6" role="tab" aria-selected="false">
-              <span class="process-step__count">06</span>
-              <strong>Week 6</strong>
-              <em>Leverage</em>
-            </button>
-            <button class="process-step" type="button" data-process-target="week-7" role="tab" aria-selected="false">
-              <span class="process-step__count">07</span>
-              <strong>Week 7</strong>
-              <em>Opportunity</em>
-            </button>
-            <button class="process-step" type="button" data-process-target="week-8" role="tab" aria-selected="false">
-              <span class="process-step__count">08</span>
-              <strong>Week 8</strong>
-              <em>Verification</em>
-            </button>
+            <button class="process-step is-active" type="button" data-process-target="week-1" role="tab" aria-selected="true"><span class="process-step__count">01</span><strong>Week 1</strong><em>Excavation</em></button>
+            <button class="process-step" type="button" data-process-target="week-2" role="tab" aria-selected="false"><span class="process-step__count">02</span><strong>Week 2</strong><em>Crystallization</em></button>
+            <button class="process-step" type="button" data-process-target="week-3" role="tab" aria-selected="false"><span class="process-step__count">03</span><strong>Week 3</strong><em>Attention</em></button>
+            <button class="process-step" type="button" data-process-target="week-4" role="tab" aria-selected="false"><span class="process-step__count">04</span><strong>Week 4</strong><em>Traction</em></button>
+            <button class="process-step" type="button" data-process-target="week-5" role="tab" aria-selected="false"><span class="process-step__count">05</span><strong>Week 5</strong><em>Calibration</em></button>
+            <button class="process-step" type="button" data-process-target="week-6" role="tab" aria-selected="false"><span class="process-step__count">06</span><strong>Week 6</strong><em>Leverage</em></button>
+            <button class="process-step" type="button" data-process-target="week-7" role="tab" aria-selected="false"><span class="process-step__count">07</span><strong>Week 7</strong><em>Opportunity</em></button>
+            <button class="process-step" type="button" data-process-target="week-8" role="tab" aria-selected="false"><span class="process-step__count">08</span><strong>Week 8</strong><em>Verification</em></button>
           </div>
 
           <div class="process-focus__content">
@@ -453,21 +1641,8 @@
     </div>
   </section>
 
-  <div class="dot-connector" aria-hidden="true">
-    <span class="dot-connector__dot"></span>
-    <span class="dot-connector__dot"></span>
-    <span class="dot-connector__dot"></span>
-    <span class="dot-connector__dot"></span>
-    <span class="dot-connector__dot"></span>
-    <span class="dot-connector__dot"></span>
-    <span class="dot-connector__dot"></span>
-  </div>
-
-  <section class="founder layer-card layer-card--blue">
-    <div class="founder-bg">
-      <img src="assets/asset 11 - founder.png" alt="Bernhard Neumann">
-      <div class="founder-overlay"></div>
-    </div>
+  <!-- FOUNDER -->
+  <section class="founder">
     <div class="container">
       <div class="founder-content reveal">
         <p class="section-eyebrow">Your Guide</p>
@@ -479,6 +1654,7 @@
     </div>
   </section>
 
+  <!-- PROOF -->
   <section class="proof" id="proof">
     <div class="container">
       <div class="section-header reveal">
@@ -490,10 +1666,10 @@
       <div class="proof-grid">
         <article class="proof-card reveal">
           <div class="proof-card-image">
-            <img src="assets/asset 12 - proof 1.png" alt="Consultant at work">
+            <img src="assets/asset 12 - proof 1.png" alt="Consultant at work" onerror="this.style.display='none'">
           </div>
           <div class="proof-card-body">
-            <div class="proof-tag">Consultants & Advisors</div>
+            <div class="proof-tag">Consultants &amp; Advisors</div>
             <p class="proof-story">Your best work doesn't fit in a proposal. The people who already hire you know that. But the people who haven't hired you yet are evaluating you like any other name in the category.</p>
             <p class="proof-result">Builderz helps you build a signal the right people can feel before the conversation starts.</p>
           </div>
@@ -501,10 +1677,10 @@
 
         <article class="proof-card reveal">
           <div class="proof-card-image">
-            <img src="assets/asset 13 - proof 2.png" alt="Agency founder at work">
+            <img src="assets/asset 13 - proof 2.png" alt="Agency founder at work" onerror="this.style.display='none'">
           </div>
           <div class="proof-card-body">
-            <div class="proof-tag">Agency Owners & Operators</div>
+            <div class="proof-tag">Agency Owners &amp; Operators</div>
             <p class="proof-story">Parts of the model still work. But the middle is thinning and you know it. You don't want to spend the next three years defending margins on work that is becoming easier to replicate.</p>
             <p class="proof-result">Builderz helps you reposition around what is actually yours: the thing no one else in the category can offer.</p>
           </div>
@@ -513,6 +1689,7 @@
     </div>
   </section>
 
+  <!-- PRICING -->
   <section class="pricing" id="pricing">
     <div class="container">
       <div class="section-header reveal">
@@ -520,70 +1697,72 @@
         <h2 class="section-title">A small room. Eight weeks. One serious question.</h2>
         <p class="section-desc">What are you actually building around? If you don't have a clear answer, this is the work.</p>
       </div>
-    </div>
 
-    <div class="pricing-card reveal">
-      <div class="pricing-grid">
-        <div class="pricing-market">
-          <span class="pricing-label">What you would normally piece together</span>
-          <div class="pricing-value-stack" aria-label="Typical separate costs compared to Builderz World">
-            <div class="pricing-value-row">
-              <div><strong>Zone of Genius excavation</strong><span>Private positioning interview + synthesis</span></div>
-              <b>€2k-€5k</b>
+      <div class="pricing-card reveal">
+        <div class="pricing-grid">
+          <div class="pricing-market">
+            <span class="pricing-label">What you would normally piece together</span>
+            <div class="pricing-value-stack" aria-label="Typical separate costs compared to Builderz World">
+              <div class="pricing-value-row">
+                <div><strong>Zone of Genius excavation</strong><span>Private positioning interview + synthesis</span></div>
+                <b>€2k-€5k</b>
+              </div>
+              <div class="pricing-value-row">
+                <div><strong>Brand strategy sprint</strong><span>Positioning, messaging, and one-page brief</span></div>
+                <b>€5k-€12k</b>
+              </div>
+              <div class="pricing-value-row">
+                <div><strong>Ghostwriter / content partner</strong><span>Voice matching, hooks, posts, and feedback</span></div>
+                <b>€3k-€6k / mo</b>
+              </div>
+              <div class="pricing-value-row">
+                <div><strong>AI workflow buildout</strong><span>Custom prompts, bottleneck mapping, leverage system</span></div>
+                <b>€2k-€8k</b>
+              </div>
+              <div class="pricing-value-row">
+                <div><strong>High-signal peer room</strong><span>Feedback, comments, accountability, and warm network</span></div>
+                <b>Hard to buy</b>
+              </div>
             </div>
-            <div class="pricing-value-row">
-              <div><strong>Brand strategy sprint</strong><span>Positioning, messaging, and one-page brief</span></div>
-              <b>€5k-€12k</b>
+            <div class="pricing-value-total" aria-label="Combined typical cost">
+              <span>Usually paid separately</span>
+              <strong>€12k-€31k+</strong>
+              <p>before the peer room, ongoing feedback, and the tribe are even counted.</p>
             </div>
-            <div class="pricing-value-row">
-              <div><strong>Ghostwriter / content partner</strong><span>Voice matching, hooks, posts, and feedback</span></div>
-              <b>€3k-€6k / mo</b>
-            </div>
-            <div class="pricing-value-row">
-              <div><strong>AI workflow buildout</strong><span>Custom prompts, bottleneck mapping, leverage system</span></div>
-              <b>€2k-€8k</b>
-            </div>
-            <div class="pricing-value-row">
-              <div><strong>High-signal peer room</strong><span>Feedback, comments, accountability, and warm network</span></div>
-              <b>Hard to buy</b>
-            </div>
+            <p class="pricing-summary">Builderz World compresses the whole stack into one guided 8-week system instead of five separate hires, retainers, and disconnected tools.</p>
           </div>
-          <div class="pricing-value-total" aria-label="Combined typical cost">
-            <span>Usually paid separately</span>
-            <strong>€12k-€31k+</strong>
-            <p>before the peer room, ongoing feedback, and the tribe are even counted.</p>
-          </div>
-          <p class="pricing-summary">Builderz World compresses the whole stack into one guided 8-week system instead of five separate hires, retainers, and disconnected tools.</p>
-        </div>
-        <div class="pricing-actual">
-          <span class="pricing-label">Alpha cohort investment</span>
-          <div class="pricing-timer" id="pricingTimer">
-            <span class="pricing-timer__label">Early-bird ends in</span>
-            <div class="pricing-timer__digits">
-              <span class="pricing-timer__unit"><span id="timerDays">00</span><small>d</small></span>
-              <span class="pricing-timer__sep">:</span>
-              <span class="pricing-timer__unit"><span id="timerHours">00</span><small>h</small></span>
-              <span class="pricing-timer__sep">:</span>
-              <span class="pricing-timer__unit"><span id="timerMins">00</span><small>m</small></span>
-              <span class="pricing-timer__sep">:</span>
-              <span class="pricing-timer__unit"><span id="timerSecs">00</span><small>s</small></span>
+
+          <div class="pricing-actual">
+            <span class="pricing-label">Alpha cohort investment</span>
+            <div class="pricing-timer" id="pricingTimer">
+              <span class="pricing-timer__label">Early-bird ends in</span>
+              <div class="pricing-timer__digits">
+                <span class="pricing-timer__unit"><span id="timerDays">00</span><small>d</small></span>
+                <span class="pricing-timer__sep">:</span>
+                <span class="pricing-timer__unit"><span id="timerHours">00</span><small>h</small></span>
+                <span class="pricing-timer__sep">:</span>
+                <span class="pricing-timer__unit"><span id="timerMins">00</span><small>m</small></span>
+                <span class="pricing-timer__sep">:</span>
+                <span class="pricing-timer__unit"><span id="timerSecs">00</span><small>s</small></span>
+              </div>
             </div>
+            <p class="pricing-amount">€2,000</p>
+            <p class="pricing-amount-full"><del>€3,000</del> full price</p>
+            <p class="pricing-scarcity">Small cohort · Application required</p>
+            <p class="pricing-note">One payment. The full system. The small room. The tribe after. Less than most operators spend to solve just one piece of this.</p>
+            <a href="https://calendar.app.google/8dwz9SdBRsJrc2198" class="btn btn-primary apply-trigger" id="pricingApply">Apply now</a>
           </div>
-          <p class="pricing-amount">€2,000</p>
-          <p class="pricing-amount-full"><del>€3,000</del> full price</p>
-          <p class="pricing-scarcity">Small cohort · Application required</p>
-          <p class="pricing-note">One payment. The full system. The small room. The tribe after. Less than most operators spend to solve just one piece of this.</p>
-          <a href="https://calendar.app.google/8dwz9SdBRsJrc2198" class="btn btn-primary apply-trigger" id="pricingApply">Apply now</a>
         </div>
       </div>
-    </div>
 
-    <div class="fit-card reveal">
-      <h3>This is early if you are still at zero.</h3>
-      <p>If you already have traction and can feel the scoreboard shifting, this is the moment. You get one career. Make sure it is pointed at the right thing.</p>
+      <div class="fit-card reveal">
+        <h3>This is early if you are still at zero.</h3>
+        <p>If you already have traction and can feel the scoreboard shifting, this is the moment. You get one career. Make sure it is pointed at the right thing.</p>
+      </div>
     </div>
   </section>
 
+  <!-- TESTIMONIAL STRIP -->
   <section class="testimonial-strip" aria-label="What Builders say before joining">
     <div class="testimonial-strip__track">
       <p>"I have ideas everywhere, but nothing that makes people understand why they should come to me."</p>
@@ -609,6 +1788,7 @@
     </div>
   </section>
 
+  <!-- FAQ -->
   <section class="faq" id="faq">
     <div class="container">
       <div class="section-header reveal">
@@ -622,22 +1802,18 @@
           <summary class="faq-question">Is this mainly an AI program?</summary>
           <p class="faq-answer">No. AI is one layer, not the whole thing. You cannot use AI as a multiplier if you don't know what you are multiplying. The Zone of Genius work comes first.</p>
         </details>
-
         <details class="faq-item">
           <summary class="faq-question">Do I need a big audience for this to make sense?</summary>
           <p class="faq-answer">No. This is not about follower counts. It is about becoming the obvious choice for the right people. You need to be known to the few who matter, not the many who won't buy anyway.</p>
         </details>
-
         <details class="faq-item">
           <summary class="faq-question">Who is this best for?</summary>
           <p class="faq-answer">Consultants, advisors, agency owners, operators, and founder-led builders who already have real ability and can feel generic positioning getting more dangerous.</p>
         </details>
-
         <details class="faq-item">
           <summary class="faq-question">Why an application instead of open checkout?</summary>
           <p class="faq-answer">Because the room matters. A cohort is only as good as the people in it. Applications keep the work specific and the conversations worth having.</p>
         </details>
-
         <details class="faq-item">
           <summary class="faq-question">What do I leave with after 8 weeks?</summary>
           <p class="faq-answer">A clear Zone of Genius. A positioning and messaging system built around it. AI workflows that amplify it. And a higher standard for what you are building toward.</p>
@@ -646,6 +1822,7 @@
     </div>
   </section>
 
+  <!-- COMPARISON -->
   <section class="comparison" id="comparison">
     <div class="container">
       <div class="section-header reveal">
@@ -692,31 +1869,25 @@
     </div>
   </section>
 
-  <section class="final-cta expanding-section" id="apply">
-    <div class="expanding-panel-wrap">
-      <div class="expanding-panel" id="expandingPanel">
-        <div class="bottom-image">
-          <div class="bottom-image-fade"></div>
-          <img src="assets/asset 14 - bottom.png" alt="A figure standing before a bright horizon">
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="apply">
+    <div class="container">
+      <div class="final-content reveal">
+        <p class="final-eyebrow">Next cohort</p>
+        <h2>AI is about to make it very clear who built around something real.</h2>
+        <p class="final-question">You get one career.<br>Make sure it is pointed at the right thing.</p>
+        <div class="final-pillars">
+          <span>Zone of Genius</span>
+          <span>Personal Signal</span>
+          <span>AI Leverage</span>
         </div>
-        <div class="container">
-          <div class="final-content reveal">
-            <p class="final-eyebrow">Next cohort</p>
-            <h2>AI is about to make it very clear who built around something real.</h2>
-            <p class="final-question">You get one career.<br>Make sure it is pointed at the right thing.</p>
-            <div class="final-pillars">
-              <span>Zone of Genius</span>
-              <span>Personal Signal</span>
-              <span>AI Leverage</span>
-            </div>
-            <a href="#pricingApply" class="btn btn-primary">Apply for the cohort</a>
-            <p class="final-note">Small cohort · Applications reviewed personally · Reply within a few days</p>
-          </div>
-        </div>
+        <a href="#pricingApply" class="btn btn-primary">Apply for the cohort</a>
+        <p class="final-note">Small cohort · Applications reviewed personally · Reply within a few days</p>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
@@ -739,10 +1910,10 @@
   </footer>
 
   <!-- Booking popup -->
-  <div class="booking-overlay" id="bookingOverlay">
+  <div class="booking-overlay" id="bookingOverlay" role="dialog" aria-modal="true" aria-label="Book your application call">
     <div class="booking-modal">
       <button class="booking-close" id="bookingClose" aria-label="Close">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
       <div class="booking-header">
         <span class="booking-brand">Builderz World</span>
@@ -759,6 +1930,89 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    // Mobile menu
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => menu.classList.toggle('is-open'));
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('is-open')));
+    }
+
+    // Process week tabs
+    const steps = document.querySelectorAll('.process-step');
+    const copies = document.querySelectorAll('.process-copy');
+    steps.forEach(step => {
+      step.addEventListener('click', () => {
+        const target = step.dataset.processTarget;
+        steps.forEach(s => { s.classList.remove('is-active'); s.setAttribute('aria-selected', 'false'); });
+        step.classList.add('is-active');
+        step.setAttribute('aria-selected', 'true');
+        copies.forEach(c => c.classList.toggle('is-active', c.dataset.processCopy === target));
+      });
+    });
+
+    // Countdown — early-bird ends 7 days from first visit (stored inline, no storage API)
+    (function(){
+      const target = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+      const d = document.getElementById('timerDays');
+      const h = document.getElementById('timerHours');
+      const m = document.getElementById('timerMins');
+      const s = document.getElementById('timerSecs');
+      if (!d) return;
+      function tick(){
+        const diff = Math.max(0, target - new Date());
+        const days = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
+        const mins = Math.floor((diff % 3600000) / 60000);
+        const secs = Math.floor((diff % 60000) / 1000);
+        d.textContent = String(days).padStart(2,'0');
+        h.textContent = String(hours).padStart(2,'0');
+        m.textContent = String(mins).padStart(2,'0');
+        s.textContent = String(secs).padStart(2,'0');
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // Booking modal
+    const applyBtn = document.getElementById('pricingApply');
+    const overlay = document.getElementById('bookingOverlay');
+    const closeBtn = document.getElementById('bookingClose');
+    if (applyBtn && overlay) {
+      applyBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      });
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+      });
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.classList.remove('is-open');
+          document.body.style.overflow = '';
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+          overlay.classList.remove('is-open');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
