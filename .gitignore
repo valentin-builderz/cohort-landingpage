@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+.vercel/
+
+# Local source/design material. The deployed site is copied to the repo root.
+01_Landing Page Template/
+V3/
+design (2).md
+*.bak
