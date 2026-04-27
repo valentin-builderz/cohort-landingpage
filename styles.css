@@ -1513,6 +1513,45 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* ── ARC GRAPH SECTION ─────────────────────────────── */
+    .arc-section {
+      padding: clamp(72px, 9vw, 120px) 0 clamp(80px, 10vw, 140px);
+      background: #C4D5CC;
+    }
+
+    .arc-section .section-header {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .arc-section .section-eyebrow {
+      color: rgba(11, 45, 28, 0.5);
+    }
+
+    .arc-section .section-title {
+      color: #0B2117;
+    }
+
+    .arc-section .section-desc {
+      color: rgba(11, 33, 23, 0.55);
+    }
+
+    .arc-graph {
+      margin-top: clamp(2.5rem, 5vw, 4.5rem);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(11, 33, 23, 0.14), 0 4px 16px rgba(11, 33, 23, 0.08);
+    }
+
+    .arc-graph-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .founder {
       position: relative;
       min-height: 74vh;

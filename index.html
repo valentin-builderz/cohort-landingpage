@@ -866,6 +866,50 @@
     /* ============================================================
        FOUNDER
        ============================================================ */
+    .arc-section {
+      padding: clamp(72px, 9vw, 120px) 0 clamp(80px, 10vw, 140px);
+      background: var(--bg);
+    }
+    .arc-section .section-header {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    /* ── PROOF SECTION — BRIGHT TREATMENT ───────────────── */
+    .proof {
+      background: #C4D5CC;
+      padding: clamp(72px, 9vw, 120px) 0 clamp(80px, 10vw, 140px);
+    }
+    .proof .section-eyebrow { color: rgba(11, 45, 28, 0.5); }
+    .proof .section-title { color: #0B2117; }
+    .proof .section-desc { color: rgba(11, 33, 23, 0.55); }
+    .proof .proof-card {
+      background: #fff;
+      border: none;
+      box-shadow: 0 16px 56px rgba(11, 33, 23, 0.1), 0 2px 8px rgba(11, 33, 23, 0.06);
+    }
+    .proof .proof-card-image { background: #e8f0ec; }
+    .proof .proof-tag {
+      background: rgba(11, 65, 38, 0.08);
+      border-color: rgba(11, 65, 38, 0.15);
+      color: #1a5c35;
+    }
+    .proof .proof-story { color: rgba(11, 33, 23, 0.55); }
+    .proof .proof-result { color: #0B2117; }
+    .arc-graph {
+      margin-top: clamp(2.5rem, 5vw, 4.5rem);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(11, 33, 23, 0.14), 0 4px 16px rgba(11, 33, 23, 0.08);
+    }
+    .arc-graph-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .founder { background: var(--bg-2); }
     .founder-grid {
       display: grid;
@@ -921,7 +965,7 @@
       background: var(--bg-2);
       overflow: hidden;
     }
-    .proof-card-image img { width: 100%; height: 100%; object-fit: cover; }
+    .proof-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
     .proof-card-body { padding: 40px; display: flex; flex-direction: column; gap: 18px; }
     .proof-tag {
       display: inline-flex;
@@ -1549,6 +1593,50 @@
       * { transition-duration: 0.01ms !important; }
     }
 
+    /* ============================================================
+       MOBILE FIXES — 640px and below
+       ============================================================ */
+    @media (max-width: 640px) {
+      /* Prevent any horizontal overflow */
+      body { overflow-x: hidden; }
+      .container { padding: 0 20px; }
+
+      /* Hero */
+      .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .hero-actions .btn { width: 100%; text-align: center; justify-content: center; }
+
+      /* Pricing card */
+      .pricing-card { padding: 24px 20px; }
+      .pricing-value-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .pricing-value-row b { white-space: normal; }
+      .pricing-value-row strong { font-size: 15px; }
+      .pricing-timer__digits { font-size: 22px; gap: 4px; }
+      .pricing-value-total { padding: 16px; }
+      .pricing-value-total strong { font-size: 26px; }
+      .pricing-amount { font-size: 52px; }
+      .fit-card { padding: 24px 20px; }
+
+      /* Proof grid */
+      .proof-grid { grid-template-columns: 1fr; }
+      .proof-card-body { padding: 28px 24px; }
+
+      /* Process focus */
+      .process-focus { padding: 24px 20px; }
+
+      /* Arc graph */
+      .arc-graph { border-radius: var(--radius); }
+
+      /* Comparison */
+      .comparison-board { grid-template-columns: 1fr; }
+
+      /* Final CTA */
+      .final-cta .btn { width: 100%; text-align: center; justify-content: center; }
+    }
+
     /* SR-only */
     .visually-hidden {
       position: absolute !important;
@@ -1908,6 +1996,20 @@
             </article>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARC GRAPH -->
+  <section class="arc-section" id="arc">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">The Transformation</p>
+        <h2 class="section-title">Every Builder starts in the same place. Eight weeks later, the market sees them differently.</h2>
+        <p class="section-desc">This is not a straight line. It is a deliberate sequence — identity first, then visibility, then leverage. The arc only works in order.</p>
+      </div>
+      <div class="arc-graph reveal">
+        <img src="assets/builders-arc-graph.png" alt="The Builder's Arc — transformation from invisible expert to obvious choice over 8 weeks" class="arc-graph-img">
       </div>
     </div>
   </section>
