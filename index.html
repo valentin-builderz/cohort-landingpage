@@ -494,11 +494,17 @@
        REEL (infinite marquee of cards)
        ============================================================ */
     .reel-section { padding: 40px 0 120px; }
-    .reel-track-wrap {
+    .reel-clip {
       position: relative;
       overflow: hidden;
       mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
       -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+    .reel-track-wrap {
+      position: relative;
+      overflow: visible;
+      padding: 14px 0;
+      margin: -14px 0;
     }
     .reel-track {
       display: flex;
@@ -752,7 +758,7 @@
       letter-spacing: -0.01em;
     }
     .wj-step--prep .wj-step__num,
-    .wj-step--prep strong { opacity: 0.38; color: var(--muted); }
+    .wj-step--prep strong { opacity: 1; color: var(--text); }
     .wj-arrow {
       display: flex;
       align-items: center;
@@ -1011,9 +1017,9 @@
     }
     .pricing-grid {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 48px;
-      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
     }
     .pricing-label {
       display: block;
@@ -1756,6 +1762,7 @@
 
   <!-- REEL -->
   <section class="reel-section" aria-label="What you build in Builderz World">
+    <div class="reel-clip">
     <div class="reel-track-wrap">
       <div class="reel-track">
         <div class="reel-card"><span class="reel-card__kicker">Zone of Genius</span><p class="reel-card__text">Discover what only you can do — the work that can never be fully replicated</p></div>
@@ -1776,6 +1783,7 @@
         <div class="reel-card" aria-hidden="true"><span class="reel-card__kicker">Positioning</span><p class="reel-card__text">Stop fighting for attention in a category. Build signal so sharp the right people come to you</p></div>
         <div class="reel-card" aria-hidden="true"><span class="reel-card__kicker">Market Recognition</span><p class="reel-card__text">Let the right prospects recognize themselves in your work before the first conversation</p></div>
       </div>
+    </div>
     </div>
   </section>
 
