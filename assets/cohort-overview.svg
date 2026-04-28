@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="580" viewBox="0 0 1600 580">
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1490" viewBox="0 0 1400 1490" role="img" aria-labelledby="title desc">
+  <title id="title">Builderz World cohort overview</title>
+  <desc id="desc">A vertical overview of the Builderz World cohort: three phases stacked, with Week 0 Threshold inside Phase I, then Identity, Signal, and Leverage.</desc>
   <defs>
     <radialGradient id="bgGlow" cx="50%" cy="0%" r="60%">
       <stop offset="0%" stop-color="#F7F5EE"/>
@@ -8,10 +10,6 @@
       <stop offset="0%" stop-color="#0B3B2B" stop-opacity="0.10"/>
       <stop offset="100%" stop-color="#0B3B2B" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="cardPrep" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.04"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
-    </linearGradient>
     <linearGradient id="cardP1" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0.56"/>
@@ -32,379 +30,334 @@
   </defs>
 
   <!-- Background -->
-  <rect width="1600" height="580" fill="url(#bgGlow)"/>
-  <ellipse cx="800" cy="-60" rx="760" ry="260" fill="url(#topGlow)"/>
+  <rect width="1400" height="1490" fill="url(#bgGlow)"/>
+  <ellipse cx="700" cy="-60" rx="760" ry="260" fill="url(#topGlow)"/>
 
   <!-- ── HEADER ── -->
-  <text x="800" y="46" text-anchor="middle" class="mono" font-size="9" letter-spacing="2.8"
-    fill="#0B3B2B" fill-opacity="0.75">COHORT OVERVIEW — BUILDERZ WORLD</text>
+  <text x="700" y="50" text-anchor="middle" class="mono" font-size="10" letter-spacing="2.8"
+    fill="#0B3B2B" fill-opacity="0.78">COHORT OVERVIEW — BUILDERZ WORLD</text>
 
-  <text x="800" y="84" text-anchor="middle" class="serif" font-size="33"
+  <text x="700" y="92" text-anchor="middle" class="serif" font-size="36"
     fill="#0B2117">8 Weeks. Three Phases.</text>
 
-  <text x="800" y="112" text-anchor="middle" class="sans" font-size="12.5"
+  <text x="700" y="124" text-anchor="middle" class="sans" font-size="14"
     fill="rgba(46,63,56,0.90)">Week 0 sets the room. Weeks 1–8 move from identity to signal to leverage — each phase building on the last.</text>
 
-  <line x1="44" y1="132" x2="1556" y2="132" stroke="rgba(11,33,23,0.07)" stroke-width="1"/>
-
-  <!-- ── PHASE HEADER BARS (y=142, h=46) ──
-       col stride=169, colW=159
-       col0:x=44   col1:x=213  col2:x=382
-       col3:x=551  col4:x=720  col5:x=889
-       col6:x=1058 col7:x=1227 col8:x=1396
-  -->
-
-  <!-- Prep bar -->
-  <rect x="44" y="142" width="159" height="46" rx="10"
-    fill="rgba(11,59,43,0.06)" stroke="rgba(11,59,43,0.20)" stroke-width="1"/>
-  <rect x="44" y="142" width="159" height="2.5" rx="1.5" fill="#0B3B2B" fill-opacity="0.48"/>
-  <text x="123.5" y="161" text-anchor="middle" class="mono" font-size="7" letter-spacing="1.5"
-    fill="#0B3B2B" fill-opacity="0.76">PREP WEEK</text>
-  <text x="123.5" y="177" text-anchor="middle" class="mono" font-size="7.5"
-    fill="rgba(11,59,43,0.52)">WK 0</text>
-
-  <!-- Phase I bar (cols 1–2: x=213, w=328) -->
-  <rect x="213" y="142" width="328" height="46" rx="10"
-    fill="rgba(11,59,43,0.07)" stroke="rgba(11,59,43,0.22)" stroke-width="1"/>
-  <rect x="213" y="142" width="328" height="2.5" rx="1.5" fill="#0B3B2B" fill-opacity="0.55"/>
-  <text x="377" y="161" text-anchor="middle" class="mono" font-size="7" letter-spacing="1.5"
-    fill="#0B3B2B" fill-opacity="0.80">PHASE I — IDENTITY</text>
-  <text x="377" y="177" text-anchor="middle" class="mono" font-size="7.5"
-    fill="rgba(11,59,43,0.52)">WK 1–2</text>
-
-  <!-- Phase II bar (cols 3–5: x=551, w=497) -->
-  <rect x="551" y="142" width="497" height="46" rx="10"
-    fill="rgba(11,59,43,0.05)" stroke="rgba(11,59,43,0.17)" stroke-width="1"/>
-  <rect x="551" y="142" width="497" height="2.5" rx="1.5" fill="#0B3B2B" fill-opacity="0.45"/>
-  <text x="799.5" y="161" text-anchor="middle" class="mono" font-size="7" letter-spacing="1.5"
-    fill="#0B3B2B" fill-opacity="0.70">PHASE II — SIGNAL</text>
-  <text x="799.5" y="177" text-anchor="middle" class="mono" font-size="7.5"
-    fill="rgba(11,59,43,0.44)">WK 3–5</text>
-
-  <!-- Phase III bar (cols 6–8: x=1058, w=497) -->
-  <rect x="1058" y="142" width="497" height="46" rx="10"
-    fill="rgba(11,59,43,0.07)" stroke="rgba(11,59,43,0.22)" stroke-width="1"/>
-  <rect x="1058" y="142" width="497" height="2.5" rx="1.5" fill="#0B3B2B" fill-opacity="0.55"/>
-  <text x="1306.5" y="161" text-anchor="middle" class="mono" font-size="7" letter-spacing="1.5"
-    fill="#0B3B2B" fill-opacity="0.80">PHASE III — LEVERAGE</text>
-  <text x="1306.5" y="177" text-anchor="middle" class="mono" font-size="7.5"
-    fill="rgba(11,59,43,0.52)">WK 6–8</text>
+  <line x1="50" y1="150" x2="1350" y2="150" stroke="rgba(11,33,23,0.07)" stroke-width="1"/>
 
   <!-- ══════════════════════════════════════════════════════════
-       WEEK CARDS  y=194  height=326  bottom=520
+       PHASE I — IDENTITY  (incl. Week 0 Threshold)
+       Bar y=180 (h=58)   Cards y=252 (h=320)
+       Cards x: 50, 520, 990 (w=360, gap=110)
   ══════════════════════════════════════════════════════════ -->
 
+  <!-- Phase I bar -->
+  <rect x="50" y="180" width="1300" height="58" rx="11"
+    fill="rgba(11,59,43,0.07)" stroke="rgba(11,59,43,0.22)" stroke-width="1"/>
+  <rect x="50" y="180" width="1300" height="3" rx="1.5" fill="#0B3B2B" fill-opacity="0.55"/>
+  <text x="72" y="208" class="mono" font-size="11" letter-spacing="2"
+    fill="#0B3B2B" fill-opacity="0.80">PHASE I — IDENTITY</text>
+  <text x="72" y="228" class="sans" font-size="13"
+    fill="rgba(46,63,56,0.78)">Find the patterns underneath your work. Name what people should recognize.</text>
+  <text x="1328" y="214" text-anchor="end" class="mono" font-size="11" letter-spacing="1.5"
+    fill="rgba(11,59,43,0.62)">WK 0–2</text>
+
   <!-- ── WEEK 0: THRESHOLD ── -->
-  <rect x="44" y="194" width="159" height="326" rx="13"
+  <rect x="50" y="252" width="360" height="320" rx="14"
     fill="url(#cardP1)" stroke="rgba(11,59,43,0.14)" stroke-width="1"/>
-  <rect x="44" y="194" width="159" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.58"/>
+  <rect x="50" y="252" width="360" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.58"/>
 
-  <text x="58" y="216" class="mono" font-size="7.5" letter-spacing="1.5"
+  <text x="76" y="282" class="mono" font-size="10" letter-spacing="1.5"
     fill="#0B3B2B" fill-opacity="0.55">WEEK 00</text>
-  <text x="58" y="240" class="serif" font-size="20"
-    fill="#0B2117">Threshold</text>
-  <text x="58" y="261" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">"The room is set."</text>
+  <text x="76" y="316" class="serif" font-size="24" fill="#0B2117">Threshold</text>
+  <text x="76" y="346" class="sans" font-size="13" font-style="italic"
+    fill="rgba(46,63,56,0.82)">"The room is set."</text>
 
-  <line x1="58" y1="282" x2="189" y2="282" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="76" y1="370" x2="384" y2="370" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="58" y="298" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="76" y="390" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">CONTEXT</text>
-  <text x="58" y="314" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">Orientation and</text>
-  <text x="58" y="329" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">setup before the</text>
-  <text x="58" y="344" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">cohort begins.</text>
+  <text x="76" y="412" class="sans" font-size="14" fill="rgba(11,33,23,0.84)">Orientation and setup before the cohort begins.</text>
 
-  <line x1="58" y1="362" x2="189" y2="362" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="76" y1="436" x2="384" y2="436" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="58" y="378" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="76" y="456" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">PREPARE</text>
-  <text x="58" y="394" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Readiness checklist</text>
+  <text x="76" y="478" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Readiness checklist</text>
 
-  <line x1="58" y1="412" x2="189" y2="412" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="76" y1="502" x2="384" y2="502" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="58" y="428" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="76" y="522" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">TRIBE</text>
-  <text x="58" y="444" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Orientation call</text>
-
+  <text x="76" y="544" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Orientation call</text>
 
   <!-- ── WEEK 1: EXCAVATION ── -->
-  <rect x="213" y="194" width="159" height="326" rx="13"
+  <rect x="520" y="252" width="360" height="320" rx="14"
     fill="url(#cardP1)" stroke="rgba(11,59,43,0.14)" stroke-width="1"/>
-  <rect x="213" y="194" width="159" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.65"/>
+  <rect x="520" y="252" width="360" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.65"/>
 
-  <text x="227" y="216" class="mono" font-size="7.5" letter-spacing="1.5"
+  <text x="546" y="282" class="mono" font-size="10" letter-spacing="1.5"
     fill="#0B3B2B" fill-opacity="0.55">WEEK 01</text>
-  <text x="227" y="240" class="serif" font-size="20" fill="#0B2117">Excavation</text>
-  <text x="227" y="261" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">"There is something</text>
-  <text x="227" y="275" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">here."</text>
+  <text x="546" y="316" class="serif" font-size="24" fill="#0B2117">Excavation</text>
+  <text x="546" y="346" class="sans" font-size="13" font-style="italic"
+    fill="rgba(46,63,56,0.82)">"There is something here."</text>
 
-  <line x1="227" y1="294" x2="358" y2="294" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="546" y1="370" x2="854" y2="370" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="227" y="310" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="546" y="390" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">CORE Q</text>
-  <text x="227" y="326" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">What if your genius</text>
-  <text x="227" y="341" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">is how you do</text>
-  <text x="227" y="356" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">the work?</text>
+  <text x="546" y="412" class="sans" font-size="14" fill="rgba(11,33,23,0.84)">What if your genius is how you do the work?</text>
 
-  <line x1="227" y1="374" x2="358" y2="374" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="546" y1="436" x2="854" y2="436" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="227" y="390" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="546" y="456" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">BUILD</text>
-  <text x="227" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Story Bank</text>
+  <text x="546" y="478" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Story Bank</text>
 
-  <line x1="227" y1="424" x2="358" y2="424" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="546" y1="502" x2="854" y2="502" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="227" y="440" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="546" y="522" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">TRIBE</text>
-  <text x="227" y="456" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">First Show-Up Sprint</text>
-
+  <text x="546" y="544" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">First Show-Up Sprint</text>
 
   <!-- ── WEEK 2: CRYSTALLIZATION ── -->
-  <rect x="382" y="194" width="159" height="326" rx="13"
+  <rect x="990" y="252" width="360" height="320" rx="14"
     fill="url(#cardP1)" stroke="rgba(11,59,43,0.14)" stroke-width="1"/>
-  <rect x="382" y="194" width="159" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.65"/>
+  <rect x="990" y="252" width="360" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.65"/>
 
-  <text x="396" y="216" class="mono" font-size="7.5" letter-spacing="1.5"
+  <text x="1016" y="282" class="mono" font-size="10" letter-spacing="1.5"
     fill="#0B3B2B" fill-opacity="0.55">WEEK 02</text>
-  <text x="396" y="240" class="serif" font-size="18" fill="#0B2117">Crystallization</text>
-  <text x="396" y="261" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">"Here it is. This is</text>
-  <text x="396" y="275" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">who I am."</text>
+  <text x="1016" y="316" class="serif" font-size="24" fill="#0B2117">Crystallization</text>
+  <text x="1016" y="346" class="sans" font-size="13" font-style="italic"
+    fill="rgba(46,63,56,0.82)">"Here it is. This is who I am."</text>
 
-  <line x1="396" y1="294" x2="527" y2="294" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="1016" y1="370" x2="1324" y2="370" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="396" y="310" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="1016" y="390" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">CORE Q</text>
-  <text x="396" y="326" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">What should the</text>
-  <text x="396" y="341" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">market understand</text>
-  <text x="396" y="356" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">about you?</text>
+  <text x="1016" y="412" class="sans" font-size="14" fill="rgba(11,33,23,0.84)">What should the market understand about you?</text>
 
-  <line x1="396" y1="374" x2="527" y2="374" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="1016" y1="436" x2="1324" y2="436" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="396" y="390" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="1016" y="456" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">BUILD</text>
-  <text x="396" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Brand Brief</text>
+  <text x="1016" y="478" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Brand Brief</text>
 
-  <line x1="396" y1="424" x2="527" y2="424" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="1016" y1="502" x2="1324" y2="502" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="396" y="440" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="1016" y="522" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">TRIBE</text>
-  <text x="396" y="456" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Naming ceremony</text>
+  <text x="1016" y="544" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Naming ceremony</text>
 
+  <!-- ══════════════════════════════════════════════════════════
+       PHASE II — SIGNAL
+       Bar y=600 (h=58)   Cards y=672 (h=320)
+  ══════════════════════════════════════════════════════════ -->
+
+  <!-- Phase II bar -->
+  <rect x="50" y="600" width="1300" height="58" rx="11"
+    fill="rgba(11,59,43,0.05)" stroke="rgba(11,59,43,0.17)" stroke-width="1"/>
+  <rect x="50" y="600" width="1300" height="3" rx="1.5" fill="#0B3B2B" fill-opacity="0.45"/>
+  <text x="72" y="628" class="mono" font-size="11" letter-spacing="2"
+    fill="#0B3B2B" fill-opacity="0.70">PHASE II — SIGNAL</text>
+  <text x="72" y="648" class="sans" font-size="13"
+    fill="rgba(46,63,56,0.78)">Turn identity into public signal. Use market response to sharpen it.</text>
+  <text x="1328" y="634" text-anchor="end" class="mono" font-size="11" letter-spacing="1.5"
+    fill="rgba(11,59,43,0.54)">WK 3–5</text>
 
   <!-- ── WEEK 3: ATTENTION ── -->
-  <rect x="551" y="194" width="159" height="326" rx="13"
+  <rect x="50" y="672" width="360" height="320" rx="14"
     fill="url(#cardP2)" stroke="rgba(11,59,43,0.11)" stroke-width="1"/>
-  <rect x="551" y="194" width="159" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.50"/>
+  <rect x="50" y="672" width="360" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.50"/>
 
-  <text x="565" y="216" class="mono" font-size="7.5" letter-spacing="1.5"
+  <text x="76" y="702" class="mono" font-size="10" letter-spacing="1.5"
     fill="#0B3B2B" fill-opacity="0.50">WEEK 03</text>
-  <text x="565" y="240" class="serif" font-size="20" fill="#0B2117">Attention</text>
-  <text x="565" y="261" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">"I know how to earn</text>
-  <text x="565" y="275" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">attention on purpose."</text>
+  <text x="76" y="736" class="serif" font-size="24" fill="#0B2117">Attention</text>
+  <text x="76" y="766" class="sans" font-size="13" font-style="italic"
+    fill="rgba(46,63,56,0.82)">"I know how to earn attention on purpose."</text>
 
-  <line x1="565" y1="294" x2="696" y2="294" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
+  <line x1="76" y1="790" x2="384" y2="790" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
-  <text x="565" y="310" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="76" y="810" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">CORE Q</text>
-  <text x="565" y="326" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">How do I make</text>
-  <text x="565" y="341" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">this visible?</text>
+  <text x="76" y="832" class="sans" font-size="14" fill="rgba(11,33,23,0.84)">How do I make this visible?</text>
 
-  <line x1="565" y1="374" x2="696" y2="374" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
+  <line x1="76" y1="856" x2="384" y2="856" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
-  <text x="565" y="390" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="76" y="876" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">BUILD</text>
-  <text x="565" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Authority Engine</text>
+  <text x="76" y="898" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Authority Engine</text>
 
-  <line x1="565" y1="424" x2="696" y2="424" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
+  <line x1="76" y1="922" x2="384" y2="922" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
-  <text x="565" y="440" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="76" y="942" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">TRIBE</text>
-  <text x="565" y="456" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Creative environment</text>
-
+  <text x="76" y="964" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Creative environment</text>
 
   <!-- ── WEEK 4: TRACTION ── -->
-  <rect x="720" y="194" width="159" height="326" rx="13"
+  <rect x="520" y="672" width="360" height="320" rx="14"
     fill="url(#cardP2)" stroke="rgba(11,59,43,0.11)" stroke-width="1"/>
-  <rect x="720" y="194" width="159" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.50"/>
+  <rect x="520" y="672" width="360" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.50"/>
 
-  <text x="734" y="216" class="mono" font-size="7.5" letter-spacing="1.5"
+  <text x="546" y="702" class="mono" font-size="10" letter-spacing="1.5"
     fill="#0B3B2B" fill-opacity="0.50">WEEK 04</text>
-  <text x="734" y="240" class="serif" font-size="20" fill="#0B2117">Traction</text>
-  <text x="734" y="261" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">"I know how to turn</text>
-  <text x="734" y="275" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">attention into traction."</text>
+  <text x="546" y="736" class="serif" font-size="24" fill="#0B2117">Traction</text>
+  <text x="546" y="766" class="sans" font-size="13" font-style="italic"
+    fill="rgba(46,63,56,0.82)">"I know how to turn attention into traction."</text>
 
-  <line x1="734" y1="294" x2="865" y2="294" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
+  <line x1="546" y1="790" x2="854" y2="790" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
-  <text x="734" y="310" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="546" y="810" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">CORE Q</text>
-  <text x="734" y="326" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">How does attention</text>
-  <text x="734" y="341" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">become interaction?</text>
+  <text x="546" y="832" class="sans" font-size="14" fill="rgba(11,33,23,0.84)">How does attention become interaction?</text>
 
-  <line x1="734" y1="374" x2="865" y2="374" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
+  <line x1="546" y1="856" x2="854" y2="856" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
-  <text x="734" y="390" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="546" y="876" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">BUILD</text>
-  <text x="734" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Traction Engine</text>
+  <text x="546" y="898" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Traction Engine</text>
 
-  <line x1="734" y1="424" x2="865" y2="424" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
+  <line x1="546" y1="922" x2="854" y2="922" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
-  <text x="734" y="440" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="546" y="942" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">TRIBE</text>
-  <text x="734" y="456" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Collective momentum</text>
-
+  <text x="546" y="964" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Collective momentum</text>
 
   <!-- ── WEEK 5: CALIBRATION ── -->
-  <rect x="889" y="194" width="159" height="326" rx="13"
+  <rect x="990" y="672" width="360" height="320" rx="14"
     fill="url(#cardP2)" stroke="rgba(11,59,43,0.11)" stroke-width="1"/>
-  <rect x="889" y="194" width="159" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.50"/>
+  <rect x="990" y="672" width="360" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.50"/>
 
-  <text x="903" y="216" class="mono" font-size="7.5" letter-spacing="1.5"
+  <text x="1016" y="702" class="mono" font-size="10" letter-spacing="1.5"
     fill="#0B3B2B" fill-opacity="0.50">WEEK 05</text>
-  <text x="903" y="240" class="serif" font-size="20" fill="#0B2117">Calibration</text>
-  <text x="903" y="261" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">"I know what</text>
-  <text x="903" y="275" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">resonates."</text>
+  <text x="1016" y="736" class="serif" font-size="24" fill="#0B2117">Calibration</text>
+  <text x="1016" y="766" class="sans" font-size="13" font-style="italic"
+    fill="rgba(46,63,56,0.82)">"I know what resonates."</text>
 
-  <line x1="903" y1="294" x2="1034" y2="294" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
+  <line x1="1016" y1="790" x2="1324" y2="790" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
-  <text x="903" y="310" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="1016" y="810" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">CORE Q</text>
-  <text x="903" y="326" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">What is actually</text>
-  <text x="903" y="341" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">working, with whom,</text>
-  <text x="903" y="356" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">and why?</text>
+  <text x="1016" y="832" class="sans" font-size="14" fill="rgba(11,33,23,0.84)">What is actually working, with whom, and why?</text>
 
-  <line x1="903" y1="374" x2="1034" y2="374" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
+  <line x1="1016" y1="856" x2="1324" y2="856" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
-  <text x="903" y="390" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="1016" y="876" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">BUILD</text>
-  <text x="903" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Authority Engine</text>
+  <text x="1016" y="898" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Authority Engine</text>
 
-  <line x1="903" y1="424" x2="1034" y2="424" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
+  <line x1="1016" y1="922" x2="1324" y2="922" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
-  <text x="903" y="440" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="1016" y="942" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">TRIBE</text>
-  <text x="903" y="456" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Peer resonance</text>
-  <text x="903" y="471" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">mapping</text>
+  <text x="1016" y="964" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Peer resonance mapping</text>
 
+  <!-- ══════════════════════════════════════════════════════════
+       PHASE III — LEVERAGE
+       Bar y=1020 (h=58)   Cards y=1092 (h=320)
+  ══════════════════════════════════════════════════════════ -->
+
+  <!-- Phase III bar -->
+  <rect x="50" y="1020" width="1300" height="58" rx="11"
+    fill="rgba(11,59,43,0.07)" stroke="rgba(11,59,43,0.22)" stroke-width="1"/>
+  <rect x="50" y="1020" width="1300" height="3" rx="1.5" fill="#0B3B2B" fill-opacity="0.55"/>
+  <text x="72" y="1048" class="mono" font-size="11" letter-spacing="2"
+    fill="#0B3B2B" fill-opacity="0.80">PHASE III — LEVERAGE</text>
+  <text x="72" y="1068" class="sans" font-size="13"
+    fill="rgba(46,63,56,0.78)">Use AI and proof to compound the work. Enter Builderz World with a verified arc.</text>
+  <text x="1328" y="1054" text-anchor="end" class="mono" font-size="11" letter-spacing="1.5"
+    fill="rgba(11,59,43,0.62)">WK 6–8</text>
 
   <!-- ── WEEK 6: LEVERAGE ── -->
-  <rect x="1058" y="194" width="159" height="326" rx="13"
+  <rect x="50" y="1092" width="360" height="320" rx="14"
     fill="url(#cardP3)" stroke="rgba(11,59,43,0.14)" stroke-width="1"/>
-  <rect x="1058" y="194" width="159" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.65"/>
+  <rect x="50" y="1092" width="360" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.65"/>
 
-  <text x="1072" y="216" class="mono" font-size="7.5" letter-spacing="1.5"
+  <text x="76" y="1122" class="mono" font-size="10" letter-spacing="1.5"
     fill="#0B3B2B" fill-opacity="0.55">WEEK 06</text>
-  <text x="1072" y="240" class="serif" font-size="20" fill="#0B2117">Leverage</text>
-  <text x="1072" y="261" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">"I know where AI</text>
-  <text x="1072" y="275" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">makes me more</text>
-  <text x="1072" y="289" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">effective."</text>
+  <text x="76" y="1156" class="serif" font-size="24" fill="#0B2117">Leverage</text>
+  <text x="76" y="1186" class="sans" font-size="13" font-style="italic"
+    fill="rgba(46,63,56,0.82)">"I know where AI makes me more effective."</text>
 
-  <line x1="1072" y1="306" x2="1203" y2="306" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="76" y1="1210" x2="384" y2="1210" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="1072" y="322" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="76" y="1230" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">CORE Q</text>
-  <text x="1072" y="338" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">Where can AI</text>
-  <text x="1072" y="353" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">remove friction?</text>
+  <text x="76" y="1252" class="sans" font-size="14" fill="rgba(11,33,23,0.84)">Where can AI remove friction?</text>
 
-  <line x1="1072" y1="374" x2="1203" y2="374" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="76" y1="1276" x2="384" y2="1276" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="1072" y="390" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="76" y="1296" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">BUILD</text>
-  <text x="1072" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">First leverage</text>
-  <text x="1072" y="421" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">workflow</text>
+  <text x="76" y="1318" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">First leverage workflow</text>
 
-  <line x1="1072" y1="440" x2="1203" y2="440" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="76" y1="1342" x2="384" y2="1342" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="1072" y="456" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="76" y="1362" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">TRIBE</text>
-  <text x="1072" y="472" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Knowledge sharing</text>
-
+  <text x="76" y="1384" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Knowledge sharing</text>
 
   <!-- ── WEEK 7: OPPORTUNITY ── -->
-  <rect x="1227" y="194" width="159" height="326" rx="13"
+  <rect x="520" y="1092" width="360" height="320" rx="14"
     fill="url(#cardP3)" stroke="rgba(11,59,43,0.14)" stroke-width="1"/>
-  <rect x="1227" y="194" width="159" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.65"/>
+  <rect x="520" y="1092" width="360" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.65"/>
 
-  <text x="1241" y="216" class="mono" font-size="7.5" letter-spacing="1.5"
+  <text x="546" y="1122" class="mono" font-size="10" letter-spacing="1.5"
     fill="#0B3B2B" fill-opacity="0.55">WEEK 07</text>
-  <text x="1241" y="240" class="serif" font-size="19" fill="#0B2117">Opportunity</text>
-  <text x="1241" y="261" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">"I know how signal</text>
-  <text x="1241" y="275" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">becomes opportunity."</text>
+  <text x="546" y="1156" class="serif" font-size="24" fill="#0B2117">Opportunity</text>
+  <text x="546" y="1186" class="sans" font-size="13" font-style="italic"
+    fill="rgba(46,63,56,0.82)">"I know how signal becomes opportunity."</text>
 
-  <line x1="1241" y1="294" x2="1372" y2="294" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="546" y1="1210" x2="854" y2="1210" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="1241" y="310" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="546" y="1230" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">CORE Q</text>
-  <text x="1241" y="326" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">Where is real</text>
-  <text x="1241" y="341" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">demand forming?</text>
+  <text x="546" y="1252" class="sans" font-size="14" fill="rgba(11,33,23,0.84)">Where is real demand forming?</text>
 
-  <line x1="1241" y1="374" x2="1372" y2="374" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="546" y1="1276" x2="854" y2="1276" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="1241" y="390" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="546" y="1296" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">BUILD</text>
-  <text x="1241" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Opportunity Engine</text>
+  <text x="546" y="1318" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Opportunity Engine</text>
 
-  <line x1="1241" y1="424" x2="1372" y2="424" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="546" y1="1342" x2="854" y2="1342" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="1241" y="440" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="546" y="1362" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">TRIBE</text>
-  <text x="1241" y="456" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Network leverage</text>
-
+  <text x="546" y="1384" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Network leverage</text>
 
   <!-- ── WEEK 8: VERIFICATION ── -->
-  <rect x="1396" y="194" width="159" height="326" rx="13"
+  <rect x="990" y="1092" width="360" height="320" rx="14"
     fill="url(#cardP3)" stroke="rgba(11,59,43,0.14)" stroke-width="1"/>
-  <rect x="1396" y="194" width="159" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.65"/>
+  <rect x="990" y="1092" width="360" height="3" rx="2" fill="#0B3B2B" fill-opacity="0.65"/>
 
-  <text x="1410" y="216" class="mono" font-size="7.5" letter-spacing="1.5"
+  <text x="1016" y="1122" class="mono" font-size="10" letter-spacing="1.5"
     fill="#0B3B2B" fill-opacity="0.55">WEEK 08</text>
-  <text x="1410" y="240" class="serif" font-size="19" fill="#0B2117">Verification</text>
-  <text x="1410" y="261" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">"I am not leaving a</text>
-  <text x="1410" y="275" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">course. I am entering</text>
-  <text x="1410" y="289" class="sans" font-size="9" font-style="italic"
-    fill="rgba(46,63,56,0.80)">a world."</text>
+  <text x="1016" y="1156" class="serif" font-size="24" fill="#0B2117">Verification</text>
+  <text x="1016" y="1186" class="sans" font-size="13" font-style="italic"
+    fill="rgba(46,63,56,0.82)">"I am not leaving a course. I am entering a world."</text>
 
-  <line x1="1410" y1="306" x2="1541" y2="306" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="1016" y1="1210" x2="1324" y2="1210" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="1410" y="322" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="1016" y="1230" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">CORE Q</text>
-  <text x="1410" y="338" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">What changed, and</text>
-  <text x="1410" y="353" class="sans" font-size="9.5" fill="rgba(11,33,23,0.82)">what now continues?</text>
+  <text x="1016" y="1252" class="sans" font-size="14" fill="rgba(11,33,23,0.84)">What changed, and what now continues?</text>
 
-  <line x1="1410" y1="374" x2="1541" y2="374" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="1016" y1="1276" x2="1324" y2="1276" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="1410" y="390" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="1016" y="1296" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">BUILD</text>
-  <text x="1410" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Builderz World</text>
-  <text x="1410" y="421" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">entry artifact</text>
+  <text x="1016" y="1318" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Builderz World entry artifact</text>
 
-  <line x1="1410" y1="440" x2="1541" y2="440" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
+  <line x1="1016" y1="1342" x2="1324" y2="1342" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
-  <text x="1410" y="456" class="mono" font-size="7" letter-spacing="1.2"
+  <text x="1016" y="1362" class="mono" font-size="9" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">TRIBE</text>
-  <text x="1410" y="472" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Verification</text>
-  <text x="1410" y="487" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">ceremony</text>
-
+  <text x="1016" y="1384" class="sans" font-size="14" fill="rgba(11,33,23,0.90)">Verification ceremony</text>
 
   <!-- ── FOOTER ── -->
-  <line x1="44" y1="538" x2="1556" y2="538" stroke="rgba(11,33,23,0.06)" stroke-width="1"/>
-  <text x="800" y="560" text-anchor="middle" class="mono" font-size="8" letter-spacing="2"
-    fill="rgba(46,63,56,0.35)">BUILDERZ WORLD — FROM IDENTITY TO SIGNAL TO LEVERAGE</text>
+  <line x1="50" y1="1442" x2="1350" y2="1442" stroke="rgba(11,33,23,0.06)" stroke-width="1"/>
+  <text x="700" y="1466" text-anchor="middle" class="mono" font-size="9" letter-spacing="2"
+    fill="rgba(46,63,56,0.40)">BUILDERZ WORLD — FROM IDENTITY TO SIGNAL TO LEVERAGE</text>
 
 </svg>

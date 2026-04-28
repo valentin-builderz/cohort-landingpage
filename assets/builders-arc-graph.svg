@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="740" viewBox="0 0 1400 740" role="img" aria-labelledby="title desc">
   <title id="title">The Builder's Arc</title>
   <desc id="desc">A four-quadrant matrix showing eight weeks of transformation from skilled but invisible to the obvious choice.</desc>
   <defs>
-    <linearGradient id="arcStroke" x1="205" y1="402" x2="1000" y2="150" gradientUnits="userSpaceOnUse">
+    <linearGradient id="arcStroke" x1="305" y1="402" x2="1100" y2="150" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#78DF94"/>
       <stop offset=".48" stop-color="#ABFFC0"/>
       <stop offset="1" stop-color="#E4FFE9"/>
     </linearGradient>
-    <filter id="arcGlow" x="150" y="66" width="930" height="390" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="arcGlow" x="250" y="66" width="930" height="390" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="8"/>
     </filter>
     <style>
@@ -24,57 +24,61 @@
     </style>
   </defs>
 
-  <rect width="1200" height="675" fill="#0B2117"/>
-  <rect x="46" y="36" width="1108" height="603" rx="26" fill="#0E2A1C" stroke="#ABFFC0" stroke-opacity=".14"/>
+  <rect width="1400" height="740" fill="#0B2117"/>
+  <rect x="46" y="36" width="1308" height="672" rx="26" fill="#0E2A1C" stroke="#ABFFC0" stroke-opacity=".14"/>
 
   <!-- Four-quadrant matrix -->
-  <rect x="150" y="74" width="900" height="360" rx="10" fill="#0C2519"/>
-  <rect x="150" y="74" width="450" height="180" fill="#5064C8" fill-opacity=".045"/>
-  <rect x="600" y="74" width="450" height="180" fill="#ABFFC0" fill-opacity=".065"/>
-  <rect x="150" y="254" width="450" height="180" fill="#E64135" fill-opacity=".06"/>
-  <rect x="600" y="254" width="450" height="180" fill="#C8A028" fill-opacity=".045"/>
+  <rect x="250" y="74" width="900" height="360" rx="10" fill="#0C2519"/>
+  <rect x="250" y="74" width="450" height="180" fill="#5064C8" fill-opacity=".045"/>
+  <rect x="700" y="74" width="450" height="180" fill="#ABFFC0" fill-opacity=".065"/>
+  <rect x="250" y="254" width="450" height="180" fill="#E64135" fill-opacity=".06"/>
+  <rect x="700" y="254" width="450" height="180" fill="#C8A028" fill-opacity=".045"/>
 
   <g stroke="#FFFFFF" stroke-opacity=".07">
-    <path d="M150 164H1050"/>
-    <path d="M150 344H1050"/>
-    <path d="M375 74V434"/>
-    <path d="M825 74V434"/>
+    <path d="M250 164H1150"/>
+    <path d="M250 344H1150"/>
+    <path d="M475 74V434"/>
+    <path d="M925 74V434"/>
   </g>
   <g stroke="#ABFFC0" stroke-opacity=".18" stroke-dasharray="7 9">
-    <path d="M150 254H1050"/>
-    <path d="M600 74V434"/>
+    <path d="M250 254H1150"/>
+    <path d="M700 74V434"/>
   </g>
 
   <g stroke="#DCEBDD" stroke-opacity=".55" stroke-width="1.7">
-    <path d="M150 434H1063"/>
-    <path d="M150 434V61"/>
-    <path d="M1063 434L1049 428.8V439.2L1063 434Z" fill="#DCEBDD" fill-opacity=".55" stroke="none"/>
-    <path d="M150 61L144.8 75H155.2L150 61Z" fill="#DCEBDD" fill-opacity=".55" stroke="none"/>
+    <path d="M250 434H1163"/>
+    <path d="M250 434V61"/>
+    <path d="M1163 434L1149 428.8V439.2L1163 434Z" fill="#DCEBDD" fill-opacity=".55" stroke="none"/>
+    <path d="M250 61L244.8 75H255.2L250 61Z" fill="#DCEBDD" fill-opacity=".55" stroke="none"/>
   </g>
 
   <g class="font">
-    <text class="axis" x="-347" y="92" transform="rotate(-90)">Market recognition</text>
-    <text class="axis" x="520" y="424">Identity clarity</text>
-    <text class="axis" x="904" y="424">Unmistakable</text>
-    <text class="axis" x="78" y="88">Obvious</text>
-    <text class="axis" x="78" y="418">Skilled, invisible</text>
+    <!-- Y-axis title (rotated) -->
+    <text class="axis" x="-347" y="192" transform="rotate(-90)">Market recognition</text>
+    <!-- Y-axis end labels (left of plot) -->
+    <text class="axis" x="178" y="88">Obvious</text>
+    <text class="axis" x="178" y="418">Skilled, invisible</text>
+    <!-- X-axis labels (below the axis line) -->
+    <text class="axis" x="620" y="458">Identity clarity</text>
+    <text class="axis" x="1004" y="458">Unmistakable</text>
 
-    <text class="zone" x="375" y="112" text-anchor="middle" fill="#758BFF" fill-opacity=".58">Clear but quiet</text>
-    <text class="zone" x="825" y="112" text-anchor="middle" fill="#ABFFC0" fill-opacity=".62">The obvious choice</text>
-    <text class="zone" x="375" y="292" text-anchor="middle" fill="#FF6258" fill-opacity=".58">Skilled but invisible</text>
-    <text class="zone" x="825" y="292" text-anchor="middle" fill="#D6B84C" fill-opacity=".52">Busy but forgettable</text>
+    <!-- Quadrant zone labels -->
+    <text class="zone" x="475" y="112" text-anchor="middle" fill="#758BFF" fill-opacity=".58">Clear but quiet</text>
+    <text class="zone" x="925" y="112" text-anchor="middle" fill="#ABFFC0" fill-opacity=".62">The obvious choice</text>
+    <text class="zone" x="475" y="292" text-anchor="middle" fill="#FF6258" fill-opacity=".58">Skilled but invisible</text>
+    <text class="zone" x="925" y="292" text-anchor="middle" fill="#D6B84C" fill-opacity=".52">Busy but forgettable</text>
   </g>
 
   <!-- Start/end callouts -->
   <g class="font">
-    <g transform="translate(168 450)">
+    <g transform="translate(268 484)">
       <circle cx="16" cy="16" r="15" fill="#ABFFC0" fill-opacity=".12" stroke="#ABFFC0" stroke-opacity=".58"/>
       <path d="M10 16h12M16 10v12" stroke="#ABFFC0" stroke-width="1.8" stroke-linecap="round"/>
       <text class="kicker" x="42" y="11" fill="#ABFFC0" fill-opacity=".75">You now</text>
       <text class="callout-title" x="42" y="32">Skilled, invisible</text>
       <text class="callout-copy" x="42" y="52">Real ability, weak signal.</text>
     </g>
-    <g transform="translate(792 450)">
+    <g transform="translate(892 484)">
       <circle cx="16" cy="16" r="15" fill="#ABFFC0" fill-opacity=".12" stroke="#ABFFC0" stroke-opacity=".72"/>
       <path d="M16 7l2.3 6.2 6.7.3-5.2 4.1 1.8 6.4-5.6-3.6-5.6 3.6 1.8-6.4L7 13.5l6.7-.3L16 7z" fill="#ABFFC0"/>
       <text class="kicker" x="42" y="11" fill="#ABFFC0">You after</text>
@@ -83,70 +87,70 @@
     </g>
   </g>
 
-  <!-- More exponential transformation curve -->
-  <path d="M205 404 C285 404 340 396 395 360 C470 310 510 246 575 218 C640 190 700 172 760 160 C835 146 925 146 1005 136"
+  <!-- Exponential transformation curve -->
+  <path d="M305 404 C385 404 440 396 495 360 C570 310 610 246 675 218 C740 190 800 172 860 160 C935 146 1025 146 1105 136"
         fill="none" stroke="#ABFFC0" stroke-width="22" stroke-linecap="round" stroke-opacity=".18" filter="url(#arcGlow)"/>
-  <path d="M205 404 C285 404 340 396 395 360 C470 310 510 246 575 218 C640 190 700 172 760 160 C835 146 925 146 1005 136"
+  <path d="M305 404 C385 404 440 396 495 360 C570 310 610 246 675 218 C740 190 800 172 860 160 C935 146 1025 146 1105 136"
         fill="none" stroke="#0B2117" stroke-width="10.5" stroke-linecap="round"/>
-  <path d="M205 404 C285 404 340 396 395 360 C470 310 510 246 575 218 C640 190 700 172 760 160 C835 146 925 146 1005 136"
+  <path d="M305 404 C385 404 440 396 495 360 C570 310 610 246 675 218 C740 190 800 172 860 160 C935 146 1025 146 1105 136"
         fill="none" stroke="url(#arcStroke)" stroke-width="5.5" stroke-linecap="round"/>
 
   <!-- Eight week nodes -->
   <g class="font">
-    <g transform="translate(280 399)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">1</text></g>
-    <g transform="translate(370 375)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">2</text></g>
-    <g transform="translate(465 314)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">3</text></g>
-    <g transform="translate(545 232)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">4</text></g>
-    <g transform="translate(635 192)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">5</text></g>
-    <g transform="translate(760 160)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">6</text></g>
-    <g transform="translate(870 148)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">7</text></g>
-    <g transform="translate(970 140)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">8</text></g>
+    <g transform="translate(380 399)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">1</text></g>
+    <g transform="translate(470 375)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">2</text></g>
+    <g transform="translate(565 314)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">3</text></g>
+    <g transform="translate(645 232)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">4</text></g>
+    <g transform="translate(735 192)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">5</text></g>
+    <g transform="translate(860 160)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">6</text></g>
+    <g transform="translate(970 148)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">7</text></g>
+    <g transform="translate(1070 140)"><circle r="13" fill="#0B2117" stroke="#ABFFC0" stroke-width="2.7"/><text class="num" x="0" y="5" text-anchor="middle">8</text></g>
   </g>
 
   <!-- Eight-week phase key -->
   <g class="font">
-    <text class="kicker" x="150" y="520" fill="#ABFFC0">The 8 weeks</text>
+    <text class="kicker" x="250" y="562" fill="#ABFFC0">The 8 weeks</text>
 
-    <g transform="translate(150 534)">
-      <rect width="198" height="45" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
-      <circle cx="22" cy="22" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="26" text-anchor="middle">1</text>
-      <text class="week-title" x="44" y="18">Excavate</text><text class="week-copy" x="44" y="36">Find raw material</text>
+    <g transform="translate(250 576)">
+      <rect width="216" height="48" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
+      <circle cx="22" cy="24" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="28" text-anchor="middle">1</text>
+      <text class="week-title" x="44" y="20">Excavate</text><text class="week-copy" x="44" y="38">Find raw material</text>
     </g>
-    <g transform="translate(376 534)">
-      <rect width="198" height="45" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
-      <circle cx="22" cy="22" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="26" text-anchor="middle">2</text>
-      <text class="week-title" x="44" y="18">Crystallize</text><text class="week-copy" x="44" y="36">Name the genius</text>
+    <g transform="translate(478 576)">
+      <rect width="216" height="48" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
+      <circle cx="22" cy="24" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="28" text-anchor="middle">2</text>
+      <text class="week-title" x="44" y="20">Crystallize</text><text class="week-copy" x="44" y="38">Name the genius</text>
     </g>
-    <g transform="translate(602 534)">
-      <rect width="198" height="45" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
-      <circle cx="22" cy="22" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="26" text-anchor="middle">3</text>
-      <text class="week-title" x="44" y="18">Position</text><text class="week-copy" x="44" y="36">Sharpen the promise</text>
+    <g transform="translate(706 576)">
+      <rect width="216" height="48" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
+      <circle cx="22" cy="24" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="28" text-anchor="middle">3</text>
+      <text class="week-title" x="44" y="20">Position</text><text class="week-copy" x="44" y="38">Sharpen the promise</text>
     </g>
-    <g transform="translate(828 534)">
-      <rect width="198" height="45" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
-      <circle cx="22" cy="22" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="26" text-anchor="middle">4</text>
-      <text class="week-title" x="44" y="18">Publish</text><text class="week-copy" x="44" y="36">Signal goes public</text>
+    <g transform="translate(934 576)">
+      <rect width="216" height="48" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
+      <circle cx="22" cy="24" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="28" text-anchor="middle">4</text>
+      <text class="week-title" x="44" y="20">Publish</text><text class="week-copy" x="44" y="38">Signal goes public</text>
     </g>
 
-    <g transform="translate(150 592)">
-      <rect width="198" height="45" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
-      <circle cx="22" cy="22" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="26" text-anchor="middle">5</text>
-      <text class="week-title" x="44" y="18">Traction</text><text class="week-copy" x="44" y="36">Market responds</text>
+    <g transform="translate(250 636)">
+      <rect width="216" height="48" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
+      <circle cx="22" cy="24" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="28" text-anchor="middle">5</text>
+      <text class="week-title" x="44" y="20">Traction</text><text class="week-copy" x="44" y="38">Market responds</text>
     </g>
-    <g transform="translate(376 592)">
-      <rect width="198" height="45" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
-      <circle cx="22" cy="22" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="26" text-anchor="middle">6</text>
-      <text class="week-title" x="44" y="18">Leverage</text><text class="week-copy" x="44" y="36">AI amplifies</text>
+    <g transform="translate(478 636)">
+      <rect width="216" height="48" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
+      <circle cx="22" cy="24" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="28" text-anchor="middle">6</text>
+      <text class="week-title" x="44" y="20">Leverage</text><text class="week-copy" x="44" y="38">AI amplifies</text>
     </g>
-    <g transform="translate(602 592)">
-      <rect width="198" height="45" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
-      <circle cx="22" cy="22" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="26" text-anchor="middle">7</text>
-      <text class="week-title" x="44" y="18">Proof</text><text class="week-copy" x="44" y="36">Evidence compounds</text>
+    <g transform="translate(706 636)">
+      <rect width="216" height="48" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
+      <circle cx="22" cy="24" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="28" text-anchor="middle">7</text>
+      <text class="week-title" x="44" y="20">Proof</text><text class="week-copy" x="44" y="38">Evidence compounds</text>
     </g>
-    <g transform="translate(828 592)">
-      <rect width="198" height="45" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
-      <circle cx="22" cy="22" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="26" text-anchor="middle">8</text>
-      <text class="week-title" x="44" y="18">Verify</text><text class="week-copy" x="44" y="36">Obvious choice</text>
+    <g transform="translate(934 636)">
+      <rect width="216" height="48" rx="8" fill="#102F20" stroke="#ABFFC0" stroke-opacity=".14"/>
+      <circle cx="22" cy="24" r="12" fill="#ABFFC0"/><text class="key-num" x="22" y="28" text-anchor="middle">8</text>
+      <text class="week-title" x="44" y="20">Verify</text><text class="week-copy" x="44" y="38">Obvious choice</text>
     </g>
   </g>
 </svg>
