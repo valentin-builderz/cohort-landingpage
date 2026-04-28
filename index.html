@@ -694,18 +694,106 @@
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
     }
-    .cohort-overview img {
+    .cohort-overview__desktop {
       width: 100%;
       min-width: 980px;
       height: auto;
       display: block;
     }
+    .cohort-overview__mobile { display: none; }
     @media (max-width: 860px) {
       .cohort-overview {
+        padding: 22px;
         border-radius: var(--radius-sm);
+        overflow: hidden;
       }
-      .cohort-overview img {
-        min-width: 1120px;
+      .cohort-overview__desktop { display: none; }
+      .cohort-overview__mobile {
+        display: grid;
+        gap: 18px;
+        color: #0B2117;
+      }
+      .cohort-mobile-head {
+        text-align: center;
+        padding: 8px 4px 4px;
+      }
+      .cohort-mobile-head span {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(11,59,43,0.68);
+      }
+      .cohort-mobile-head h4 {
+        margin: 0;
+        color: #0B2117;
+        font-size: clamp(26px, 9vw, 38px);
+        line-height: 0.98;
+      }
+      .cohort-mobile-phase {
+        display: grid;
+        gap: 10px;
+      }
+      .cohort-mobile-phase__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 0 2px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(11,59,43,0.72);
+      }
+      .cohort-mobile-phase__header::after {
+        content: attr(data-range);
+        color: rgba(11,33,23,0.42);
+      }
+      .cohort-mobile-weeks {
+        display: grid;
+        gap: 8px;
+      }
+      .cohort-mobile-week {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 14px;
+        align-items: start;
+        padding: 14px;
+        border: 1px solid rgba(11,59,43,0.12);
+        border-radius: 14px;
+        background: rgba(255,255,255,0.68);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
+      }
+      .cohort-mobile-week b {
+        display: grid;
+        place-items: center;
+        min-height: 42px;
+        border: 1px solid rgba(11,59,43,0.16);
+        border-radius: 50%;
+        font-family: var(--serif);
+        font-size: 14px;
+        font-weight: 500;
+        color: #0B3B2B;
+        background: rgba(11,59,43,0.05);
+      }
+      .cohort-mobile-week strong {
+        display: block;
+        margin-bottom: 4px;
+        font-family: var(--serif);
+        font-size: 22px;
+        line-height: 1.05;
+        font-weight: 500;
+        color: #0B2117;
+        letter-spacing: -0.01em;
+      }
+      .cohort-mobile-week span {
+        display: block;
+        color: rgba(46,63,56,0.78);
+        font-size: 13px;
+        line-height: 1.45;
       }
     }
 
@@ -1772,7 +1860,42 @@
           </div>
 
           <figure class="cohort-overview" aria-label="Cohort overview from Week 0 through Week 8">
-            <img src="assets/cohort-overview.svg" alt="Builderz World cohort overview: Week 0 Threshold, Weeks 1 through 8 across Identity, Signal, and Leverage phases">
+            <img class="cohort-overview__desktop" src="assets/cohort-overview.svg" alt="Builderz World cohort overview: Week 0 Threshold, Weeks 1 through 8 across Identity, Signal, and Leverage phases">
+            <div class="cohort-overview__mobile" aria-hidden="true">
+              <div class="cohort-mobile-head">
+                <span>Cohort overview</span>
+                <h4>8 Weeks. Three Phases.</h4>
+              </div>
+              <div class="cohort-mobile-phase">
+                <div class="cohort-mobile-phase__header" data-range="Week 0">Threshold</div>
+                <div class="cohort-mobile-weeks">
+                  <div class="cohort-mobile-week"><b>00</b><div><strong>Threshold</strong><span>Orientation, readiness, and the room being set before the cohort begins.</span></div></div>
+                </div>
+              </div>
+              <div class="cohort-mobile-phase">
+                <div class="cohort-mobile-phase__header" data-range="Weeks 1-2">Identity</div>
+                <div class="cohort-mobile-weeks">
+                  <div class="cohort-mobile-week"><b>01</b><div><strong>Excavation</strong><span>Find the patterns underneath the work and open the Story Bank.</span></div></div>
+                  <div class="cohort-mobile-week"><b>02</b><div><strong>Crystallization</strong><span>Turn raw discovery into a clear Zone of Genius Brand Brief.</span></div></div>
+                </div>
+              </div>
+              <div class="cohort-mobile-phase">
+                <div class="cohort-mobile-phase__header" data-range="Weeks 3-5">Signal</div>
+                <div class="cohort-mobile-weeks">
+                  <div class="cohort-mobile-week"><b>03</b><div><strong>Attention</strong><span>Shape notes, angles, hooks, and public signal around the right ideas.</span></div></div>
+                  <div class="cohort-mobile-week"><b>04</b><div><strong>Traction</strong><span>Turn attention into comments, DMs, response flows, and momentum.</span></div></div>
+                  <div class="cohort-mobile-week"><b>05</b><div><strong>Calibration</strong><span>Use market response and peer resonance to sharpen what is working.</span></div></div>
+                </div>
+              </div>
+              <div class="cohort-mobile-phase">
+                <div class="cohort-mobile-phase__header" data-range="Weeks 6-8">Leverage</div>
+                <div class="cohort-mobile-weeks">
+                  <div class="cohort-mobile-week"><b>06</b><div><strong>Leverage</strong><span>Identify where AI removes friction in the Builder's real work.</span></div></div>
+                  <div class="cohort-mobile-week"><b>07</b><div><strong>Opportunity</strong><span>Translate signal into proof, demand, and the right conversations.</span></div></div>
+                  <div class="cohort-mobile-week"><b>08</b><div><strong>Verification</strong><span>Compile proof, present the arc, and enter Builderz World.</span></div></div>
+                </div>
+              </div>
+            </div>
           </figure>
         </div>
 
@@ -1795,7 +1918,7 @@
               <p>The Builder enters the room, starts individual genius excavation, opens the Story Bank, and publishes the first real public signal. This week interrupts resume-language and starts finding the patterns underneath.</p>
               <div class="process-week-grid">
                 <div><b>Core question</b><strong>What if your genius is how you do the work?</strong><p>The work moves from job title to instinct, story, friction, and repeated pattern.</p></div>
-                <div><b>Build</b><strong>Story Bank v1</strong><p>Raw material for content, positioning, AI context, and future proof starts accumulating.</p></div>
+                <div><b>Build</b><strong>Story Bank</strong><p>Raw material for content, positioning, AI context, and future proof starts accumulating.</p></div>
                 <div><b>Tribe moment</b><strong>First Show-Up Sprint</strong><p>Builders post in Circle and the room comments within 24 hours, turning support into visible traction.</p></div>
               </div>
             </article>
@@ -1815,7 +1938,7 @@
               <p>Clarity turns into signal. Builders learn notes, hooks, persuasive writing, and the difference between content that performs and content that carries their real authority.</p>
               <div class="process-week-grid">
                 <div><b>Core question</b><strong>How do I make this visible?</strong><p>The Builder learns to create attention around the right ideas, not random reach.</p></div>
-                <div><b>Build</b><strong>Authority Engine v1</strong><p>Notes become angles, hooks, drafts, and posts with AI acting as sparring partner.</p></div>
+                <div><b>Build</b><strong>Authority Engine</strong><p>Notes become angles, hooks, drafts, and posts with AI acting as sparring partner.</p></div>
                 <div><b>Tribe moment</b><strong>Creative environment</strong><p>The room workshops hooks, comments with taste, and starts sharpening each other's signal.</p></div>
               </div>
             </article>
@@ -1825,7 +1948,7 @@
               <p>Posting becomes social. Builders practice commenting, DMs, response flows, networking, and the contribution mechanics that turn visibility into momentum.</p>
               <div class="process-week-grid">
                 <div><b>Core question</b><strong>How does attention become interaction?</strong><p>Feedback starts feeding the context bank and the Builder learns what kinds of people are appearing.</p></div>
-                <div><b>Build</b><strong>Traction Engine v1</strong><p>A simple system for comments, DMs, response flows, follow-up, and social momentum.</p></div>
+                <div><b>Build</b><strong>Traction Engine</strong><p>A simple system for comments, DMs, response flows, follow-up, and social momentum.</p></div>
                 <div><b>Tribe moment</b><strong>Collective momentum</strong><p>Builders see the compounding effect of a room that consistently shows up.</p></div>
               </div>
             </article>
@@ -1835,7 +1958,7 @@
               <p>By now there is enough market response to stop guessing. Comments, DMs, profile views, and peer resonance become intelligence for refining the whole signal system.</p>
               <div class="process-week-grid">
                 <div><b>Core question</b><strong>What is actually working, with whom, and why?</strong><p>The market and the room become mirrors for better judgment.</p></div>
-                <div><b>Build</b><strong>Authority Engine v2</strong><p>Winning themes, pillars, hook patterns, post types, and prompts are upgraded from evidence.</p></div>
+                <div><b>Build</b><strong>Authority Engine</strong><p>Winning themes, pillars, hook patterns, post types, and prompts are upgraded from evidence.</p></div>
                 <div><b>Tribe moment</b><strong>Peer resonance mapping</strong><p>The room sees patterns LinkedIn cannot, and the collective intelligence gets sharper.</p></div>
               </div>
             </article>
@@ -1855,7 +1978,7 @@
               <p>Visibility turns into commercial relevance without becoming salesy. Builders sharpen proof, DM handling, qualification logic, and the language that invites the right conversations.</p>
               <div class="process-week-grid">
                 <div><b>Core question</b><strong>Where is real demand forming?</strong><p>The Builder learns to distinguish noise attention from buyer, partner, and referral signals.</p></div>
-                <div><b>Build</b><strong>Opportunity Engine v1</strong><p>Inbound handling, proof assets, what-I-do clarity, exploratory call prep, and reply support.</p></div>
+                <div><b>Build</b><strong>Opportunity Engine</strong><p>Inbound handling, proof assets, what-I-do clarity, exploratory call prep, and reply support.</p></div>
                 <div><b>Tribe moment</b><strong>Network leverage</strong><p>The room becomes commercially relevant: clients, collaborators, referrers, and connectors.</p></div>
               </div>
             </article>

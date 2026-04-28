@@ -152,7 +152,7 @@
 
   <text x="227" y="390" class="mono" font-size="7" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">BUILD</text>
-  <text x="227" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Story Bank v1</text>
+  <text x="227" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Story Bank</text>
 
   <line x1="227" y1="424" x2="358" y2="424" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
@@ -219,7 +219,7 @@
 
   <text x="565" y="390" class="mono" font-size="7" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">BUILD</text>
-  <text x="565" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Authority Engine v1</text>
+  <text x="565" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Authority Engine</text>
 
   <line x1="565" y1="424" x2="696" y2="424" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
@@ -252,7 +252,7 @@
 
   <text x="734" y="390" class="mono" font-size="7" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">BUILD</text>
-  <text x="734" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Traction Engine v1</text>
+  <text x="734" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Traction Engine</text>
 
   <line x1="734" y1="424" x2="865" y2="424" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
@@ -286,7 +286,7 @@
 
   <text x="903" y="390" class="mono" font-size="7" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.50">BUILD</text>
-  <text x="903" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Authority Engine v2</text>
+  <text x="903" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Authority Engine</text>
 
   <line x1="903" y1="424" x2="1034" y2="424" stroke="rgba(11,59,43,0.09)" stroke-width="1"/>
 
@@ -356,7 +356,7 @@
 
   <text x="1241" y="390" class="mono" font-size="7" letter-spacing="1.2"
     fill="#0B3B2B" fill-opacity="0.58">BUILD</text>
-  <text x="1241" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Opportunity Engine v1</text>
+  <text x="1241" y="406" class="sans" font-size="9.5" fill="rgba(11,33,23,0.88)">Opportunity Engine</text>
 
   <line x1="1241" y1="424" x2="1372" y2="424" stroke="rgba(11,59,43,0.12)" stroke-width="1"/>
 
