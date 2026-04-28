@@ -676,99 +676,37 @@
     /* ============================================================
        WEEK JOURNEY — visual 3-phase roadmap
        ============================================================ */
-    .week-journey { display: flex; flex-direction: column; gap: 48px; }
-    .week-journey__intro { max-width: 580px; }
+    .week-journey { display: flex; flex-direction: column; gap: clamp(28px, 4vw, 48px); }
+    .week-journey__intro { max-width: 640px; }
     .week-journey__intro h3 { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.2; margin-bottom: 12px; }
     .week-journey__intro p { color: var(--muted); font-size: 17px; line-height: 1.6; margin: 0; }
-    .week-journey__map {
-      display: grid;
-      grid-template-columns: 1fr 36px 1fr 36px 1fr;
-      align-items: stretch;
-    }
-    .wj-phase {
-      background: var(--surface);
-      border: 1px solid var(--border);
+    .cohort-overview {
+      margin: 0;
+      border: 1px solid rgba(11,33,23,0.12);
       border-radius: var(--radius);
-      padding: clamp(24px, 3vw, 36px);
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      transition: border-color .35s ease, box-shadow .35s ease;
+      background:
+        radial-gradient(circle at 50% -12%, rgba(11,59,43,0.08), transparent 34%),
+        linear-gradient(180deg, #f7f5ee 0%, #e9eee7 100%);
+      box-shadow:
+        0 34px 80px -54px rgba(5,18,12,0.32),
+        inset 0 1px 0 rgba(255,255,255,0.82);
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
     }
-    .wj-phase:hover {
-      border-color: rgba(171,255,192,0.4);
-      box-shadow: inset 0 1px 0 rgba(171,255,192,0.3), 0 8px 32px -12px rgba(171,255,192,0.15);
-    }
-    .wj-phase__header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border);
-    }
-    .wj-phase__roman {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 44px;
-      line-height: 1;
-      color: var(--accent);
-      flex-shrink: 0;
-      opacity: 0.85;
-    }
-    .wj-phase__name {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: 21px;
-      color: var(--text);
-      letter-spacing: -0.01em;
-      display: block;
-      margin-bottom: 3px;
-    }
-    .wj-phase__range {
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
+    .cohort-overview img {
+      width: 100%;
+      min-width: 980px;
+      height: auto;
       display: block;
     }
-    .wj-steps { display: flex; flex-direction: column; }
-    .wj-step {
-      display: grid;
-      grid-template-columns: 30px 1fr;
-      align-items: baseline;
-      gap: 14px;
-      padding: 13px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .wj-step:last-child { border-bottom: none; padding-bottom: 0; }
-    .wj-step:first-child { padding-top: 0; }
-    .wj-step__num {
-      font-family: var(--serif);
-      font-size: 13px;
-      color: var(--accent);
-      letter-spacing: 0.05em;
-      opacity: 0.65;
-    }
-    .wj-step strong {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: clamp(17px, 1.7vw, 21px);
-      color: var(--text);
-      letter-spacing: -0.01em;
-    }
-    .wj-step--prep .wj-step__num,
-    .wj-step--prep strong { opacity: 1; color: var(--text); }
-    .wj-arrow {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      opacity: 0.3;
-    }
-    .wj-arrow svg { width: 28px; height: 14px; }
     @media (max-width: 860px) {
-      .week-journey__map { grid-template-columns: 1fr; gap: 12px; }
-      .wj-arrow { display: none; }
+      .cohort-overview {
+        border-radius: var(--radius-sm);
+      }
+      .cohort-overview img {
+        min-width: 1120px;
+      }
     }
 
     .process-focus {
@@ -1833,87 +1771,9 @@
             <p>Week 0 sets the room. Weeks 1–8 move from identity to signal to leverage — each phase building on the last.</p>
           </div>
 
-          <div class="week-journey__map" aria-label="Cohort week plan">
-            <div class="wj-phase">
-              <div class="wj-phase__header">
-                <span class="wj-phase__roman">I</span>
-                <div>
-                  <strong class="wj-phase__name">Identity</strong>
-                  <span class="wj-phase__range">Weeks 0–2</span>
-                </div>
-              </div>
-              <div class="wj-steps">
-                <div class="wj-step wj-step--prep">
-                  <span class="wj-step__num">00</span>
-                  <strong>Threshold</strong>
-                </div>
-                <div class="wj-step">
-                  <span class="wj-step__num">01</span>
-                  <strong>Excavation</strong>
-                </div>
-                <div class="wj-step">
-                  <span class="wj-step__num">02</span>
-                  <strong>Crystallization</strong>
-                </div>
-              </div>
-            </div>
-
-            <div class="wj-arrow" aria-hidden="true">
-              <svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="7" x2="22" y2="7" stroke="currentColor" stroke-width="1"/><polyline points="16,1 22,7 16,13" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-
-            <div class="wj-phase">
-              <div class="wj-phase__header">
-                <span class="wj-phase__roman">II</span>
-                <div>
-                  <strong class="wj-phase__name">Signal</strong>
-                  <span class="wj-phase__range">Weeks 3–5</span>
-                </div>
-              </div>
-              <div class="wj-steps">
-                <div class="wj-step">
-                  <span class="wj-step__num">03</span>
-                  <strong>Attention</strong>
-                </div>
-                <div class="wj-step">
-                  <span class="wj-step__num">04</span>
-                  <strong>Traction</strong>
-                </div>
-                <div class="wj-step">
-                  <span class="wj-step__num">05</span>
-                  <strong>Calibration</strong>
-                </div>
-              </div>
-            </div>
-
-            <div class="wj-arrow" aria-hidden="true">
-              <svg viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="7" x2="22" y2="7" stroke="currentColor" stroke-width="1"/><polyline points="16,1 22,7 16,13" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-
-            <div class="wj-phase">
-              <div class="wj-phase__header">
-                <span class="wj-phase__roman">III</span>
-                <div>
-                  <strong class="wj-phase__name">Leverage</strong>
-                  <span class="wj-phase__range">Weeks 6–8</span>
-                </div>
-              </div>
-              <div class="wj-steps">
-                <div class="wj-step">
-                  <span class="wj-step__num">06</span>
-                  <strong>Leverage</strong>
-                </div>
-                <div class="wj-step">
-                  <span class="wj-step__num">07</span>
-                  <strong>Opportunity</strong>
-                </div>
-                <div class="wj-step">
-                  <span class="wj-step__num">08</span>
-                  <strong>Verification</strong>
-                </div>
-              </div>
-            </div>
-          </div>
+          <figure class="cohort-overview" aria-label="Cohort overview from Week 0 through Week 8">
+            <img src="assets/cohort-overview.svg" alt="Builderz World cohort overview: Week 0 Threshold, Weeks 1 through 8 across Identity, Signal, and Leverage phases">
+          </figure>
         </div>
 
         <div class="process-focus">
